@@ -1,0 +1,206 @@
+{
+  "report": {
+    "when": "2026-10-22T16:25:14.845Z",
+    "phases": {
+      "smoke": {
+        "title": "OverPowerPoint Studio — Mega Sala Creativa",
+        "opp": "object",
+        "version": "2.0",
+        "slides": 3,
+        "commands": 243,
+        "scrollW": 1424,
+        "innerW": 1424
+      },
+      "commands": {
+        "total": 243,
+        "failing": []
+      },
+      "ribbon": {
+        "tabs": [
+          "File",
+          "Home",
+          "Inserisci",
+          "Disegna",
+          "Foto",
+          "Vettore",
+          "Presentazione",
+          "Video",
+          "Revisione",
+          "Visualizza"
+        ],
+        "clicked": 208,
+        "failing": []
+      },
+      "tools": {
+        "total": 45,
+        "failing": []
+      },
+      "text": {
+        "before": 0,
+        "after": 1,
+        "type": "text",
+        "fontOptions": 25,
+        "fontChanged": "Georgia",
+        "fontManagerOpens": true,
+        "fontsStored": 0
+      },
+      "googleFont": {
+        "families": [
+          "Roboto"
+        ],
+        "registered": 2,
+        "online": true
+      },
+      "afterReload": {
+        "reloaded": true,
+        "fonts": [
+          "Roboto"
+        ],
+        "roboto": 2,
+        "slides": 7
+      },
+      "offline": {
+        "offlineReady": true,
+        "fonts": [
+          "Roboto"
+        ],
+        "roboto": 2,
+        "slides": 7,
+        "commands": 243,
+        "fontsReady": "loaded"
+      },
+      "layers": {
+        "rows": 4,
+        "moved": true,
+        "visBefore": true,
+        "visAfter": false,
+        "grouped": 2
+      },
+      "export": {
+        "export.png": 1,
+        "export.svg": 1,
+        "export.pptx": 1,
+        "export.html": 1,
+        "export.zip": 1,
+        "print": 1
+      }
+    }
+  },
+  "checks": [
+    {
+      "name": "avvio senza eccezioni",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "tutti i comandi eseguibili",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tutti i pulsanti del ribbon senza errori",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tutti gli strumenti attivabili",
+      "ok": true,
+      "detail": "[]"
+    },
+    {
+      "name": "inserimento testo",
+      "ok": true,
+      "detail": "{\"before\":0,\"after\":1,\"type\":\"text\",\"fontOptions\":25,\"fontChanged\":\"Georgia\",\"fontManagerOpens\":true,\"fontsStored\":0}"
+    },
+    {
+      "name": "selettore font con opzioni",
+      "ok": true,
+      "detail": "25"
+    },
+    {
+      "name": "cambio font applicato",
+      "ok": true,
+      "detail": "Georgia"
+    },
+    {
+      "name": "gestore font si apre",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "font Google scaricato e incorporato",
+      "ok": true,
+      "detail": "{\"families\":[\"Roboto\"],\"registered\":2,\"online\":true}"
+    },
+    {
+      "name": "font conservato dopo la ricarica",
+      "ok": true,
+      "detail": "{\"fonts\":[\"Roboto\"],\"roboto\":2,\"slides\":7}"
+    },
+    {
+      "name": "suite caricata offline da file locale",
+      "ok": true,
+      "detail": "{\"offlineReady\":true}"
+    },
+    {
+      "name": "font incorporato nel progetto funziona offline",
+      "ok": true,
+      "detail": "{\"fonts\":[\"Roboto\"],\"roboto\":2,\"slides\":7,\"commands\":243,\"fontsReady\":\"loaded\"}"
+    },
+    {
+      "name": "comandi disponibili offline",
+      "ok": true,
+      "detail": "243"
+    },
+    {
+      "name": "pannello livelli con righe",
+      "ok": true,
+      "detail": "4"
+    },
+    {
+      "name": "pulsante ▲ riordina il livello",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "occhio mostra/nasconde",
+      "ok": true,
+      "detail": "true→false"
+    },
+    {
+      "name": "raggruppamento",
+      "ok": true,
+      "detail": "2"
+    },
+    {
+      "name": "export PNG scarica un file",
+      "ok": true,
+      "detail": "{\"export.png\":1,\"export.svg\":1,\"export.pptx\":1,\"export.html\":1,\"export.zip\":1,\"print\":1}"
+    },
+    {
+      "name": "export SVG scarica un file",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "export PPTX scarica un file",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "export HTML scarica un file",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "export ZIP scarica un file",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "stampa/PDF invoca la stampa",
+      "ok": true,
+      "detail": "1"
+    }
+  ]
+}

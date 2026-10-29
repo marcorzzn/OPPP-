@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "effects": [
+    {
+      "id": "poster-vintage",
+      "file": "poster-vintage.html",
+      "label": "Poster Vintage",
+      "icon": "🎨",
+      "description": "Serigrafia anni '70 a colori limitati da una foto.",
+      "tags": ["foto", "filtro", "vintage"],
+      "version": "1.0.0"
+    },
+    {
+      "id": "split-image",
+      "file": "split-image.html",
+      "label": "Splitta in pannelli",
+      "icon": "✂️",
+      "description": "Dividi un'immagine in N strisce verticali per caroselli.",
+      "tags": ["foto", "carousel"],
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+# Python / test
+.venv/
+.tmp/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Test artifacts (rigenerabili)
+tests/_roundtrip.opp.json
+tests/_altro.opp.json
+tests/_xss_probe.opp.json
+tests/_export_probe.html
+
+# Backup
+*.bak
+*.singleline.bak.html
+*.preformat.html
+*.zip
+

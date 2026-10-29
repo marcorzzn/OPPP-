@@ -1,0 +1,192 @@
+{
+  "checks": [
+    {
+      "n": "import immagine da file",
+      "ok": true,
+      "d": "{\"before\":6,\"after\":7,\"src\":\"data:image/png;base64,\",\"w\":120,\"picker\":1}"
+    },
+    {
+      "n": "sostituzione immagine",
+      "ok": true,
+      "d": "{\"changed\":true,\"len\":682}"
+    },
+    {
+      "n": "import audio da file",
+      "ok": true,
+      "d": "{\"before\":7,\"after\":8,\"type\":\"audio\",\"src\":\"data:audio/wav;base6\"}"
+    },
+    {
+      "n": "PNG valido",
+      "ok": true,
+      "d": "{\"size\":1741614,\"type\":\"image/png\",\"sig\":\"89504e470d0a1a0a\"}"
+    },
+    {
+      "n": "SVG valido",
+      "ok": true,
+      "d": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\""
+    },
+    {
+      "n": "PPTX è uno ZIP valido",
+      "ok": true,
+      "d": "{\"size\":3157498,\"type\":\"application/zip\",\"sig\":\"504b030414000008\"}"
+    },
+    {
+      "n": "PPTX contiene le parti OOXML",
+      "ok": true,
+      "d": "[\"[Content_Types].xml\",\"ppt/presentation.xml\",\"ppt/slides/slide1.xml\"]"
+    },
+    {
+      "n": "HTML contiene i dati del progetto",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "ZIP contiene le immagini",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "import progetto JSON",
+      "ok": true,
+      "d": "{\"name\":\"Benvenuto in OverPowerPoint\",\"slides\":3}"
+    },
+    {
+      "n": "import progetto HTML",
+      "ok": true,
+      "d": "{\"name\":\"Benvenuto in OverPowerPoint\",\"slides\":3,\"size\":281578}"
+    },
+    {
+      "n": "import PPTX esportato dalla suite",
+      "ok": true,
+      "d": "{\"before\":3,\"after\":3,\"name\":\"deck\"}"
+    },
+    {
+      "n": "tabella creata con celle",
+      "ok": true,
+      "d": "{\"rows\":4,\"cols\":2,\"csvHead\":\"Voce,Valore\\r\\nPrimo,10\\r\\nSecondo,20\\r\\nTerzo\"}"
+    },
+    {
+      "n": "tabella esportata in CSV",
+      "ok": true,
+      "d": "Voce,Valore\r\nPrimo,10\r\nSecondo,20\r\nTerzo"
+    },
+    {
+      "n": "copia e incolla con scorciatoie",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":2,\"n3\":3,\"n4\":2}"
+    },
+    {
+      "n": "annulla ripristina",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":2,\"n3\":3,\"n4\":2}"
+    },
+    {
+      "n": "ripeti riapplica",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":2,\"n3\":3,\"n4\":2}"
+    },
+    {
+      "n": "cancella elimina",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":2,\"n3\":3,\"n4\":2}"
+    },
+    {
+      "n": "disegno forma col puntatore",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":4,\"shapeType\":\"shape\",\"kind\":\"rect\",\"boolType\":\"boolean\",\"boolParts\":2,\"pathNodes\":4,\"freshType\":\"shape\"}"
+    },
+    {
+      "n": "seconda forma disegnata",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":4,\"shapeType\":\"shape\",\"kind\":\"rect\",\"boolType\":\"boolean\",\"boolParts\":2,\"pathNodes\":4,\"freshType\":\"shape\"}"
+    },
+    {
+      "n": "unione booleana",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":4,\"shapeType\":\"shape\",\"kind\":\"rect\",\"boolType\":\"boolean\",\"boolParts\":2,\"pathNodes\":4,\"freshType\":\"shape\"}"
+    },
+    {
+      "n": "conversione forma → tracciato",
+      "ok": true,
+      "d": "{\"n0\":2,\"n1\":3,\"n2\":4,\"shapeType\":\"shape\",\"kind\":\"rect\",\"boolType\":\"boolean\",\"boolParts\":2,\"pathNodes\":4,\"freshType\":\"shape\"}"
+    }
+  ],
+  "img1": {
+    "before": 6,
+    "after": 7,
+    "src": "data:image/png;base64,",
+    "w": 120,
+    "picker": 1
+  },
+  "img2": {
+    "changed": true,
+    "len": 682
+  },
+  "aud": {
+    "before": 7,
+    "after": 8,
+    "type": "audio",
+    "src": "data:audio/wav;base6"
+  },
+  "art": {
+    "png": {
+      "size": 1741614,
+      "type": "image/png",
+      "sig": "89504e470d0a1a0a"
+    },
+    "svg": {
+      "size": 61281,
+      "type": "image/svg+xml;charset=utf-8",
+      "sig": "3c73766720786d6c"
+    },
+    "svgText": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"",
+    "pptx": {
+      "size": 3157498,
+      "type": "application/zip",
+      "sig": "504b030414000008"
+    },
+    "pptxParts": [
+      "[Content_Types].xml",
+      "ppt/presentation.xml",
+      "ppt/slides/slide1.xml"
+    ],
+    "html": {
+      "size": 281606,
+      "type": "text/html;charset=utf-8",
+      "sig": "3c21444f43545950"
+    },
+    "htmlHasData": true,
+    "zip": {
+      "size": 3140460,
+      "type": "application/zip",
+      "sig": "504b030414000008"
+    },
+    "zipHasPng": true
+  },
+  "jsonImport": {
+    "name": "Benvenuto in OverPowerPoint",
+    "slides": 3
+  },
+  "htmlImport": {
+    "name": "Benvenuto in OverPowerPoint",
+    "slides": 3,
+    "size": 281578
+  },
+  "pptxImport": {
+    "before": 3,
+    "after": 3,
+    "name": "deck"
+  },
+  "tableTest": {
+    "rows": 4,
+    "cols": 2,
+    "csvHead": "Voce,Valore\r\nPrimo,10\r\nSecondo,20\r\nTerzo"
+  },
+  "editFlow": {
+    "n0": 2,
+    "n1": 3,
+    "n2": 2,
+    "n3": 3,
+    "n4": 2
+  }
+}

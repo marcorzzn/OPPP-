@@ -1,0 +1,492 @@
+ai.art                     L5364    20b 
+    ()=>openAiArtModal()
+ai.deck                    L5365    15b 
+    openAiDeckModal
+ai.image.enhance           L5372    95b 
+    ()=>{if(!selectedImage())return;setImageFilter('vivid');toast('Immagine migliorata','success')}
+ai.image.removeBg          L5373    21b 
+    removeImageBackground
+ai.improve                 L5366    19b 
+    improveSelectedText
+ai.layout                  L5365    13b 
+    applyAiLayout
+ai.palette                 L5365    18b 
+    openAiPaletteModal
+ai.pattern                 L5364    16b 
+    openPatternModal
+ai.summary                 L5366   516b 
+    ()=>{ const s=currentSlide();const text=s.elements.filter(e=>e.type==='text').map(e=>e.text).join(' ').replace(/\s+/g,' ').trim(); if(!text){toast('Ne
+ai.title                   L5364    16b 
+    openAiTitleModal
+align.bottom               L3415    35b 
+    ()=>alignSelectionCommand('bottom')
+align.centerH              L3414    36b 
+    ()=>alignSelectionCommand('centerH')
+align.centerV              L3415    36b 
+    ()=>alignSelectionCommand('centerV')
+align.distributeH          L3416    40b 
+    ()=>alignSelectionCommand('distributeH')
+align.distributeV          L3416    40b 
+    ()=>alignSelectionCommand('distributeV')
+align.left                 L3413    33b 
+    ()=>alignSelectionCommand('left')
+align.right                L3413    34b 
+    ()=>alignSelectionCommand('right')
+align.top                  L3414    32b 
+    ()=>alignSelectionCommand('top')
+anim.open                  L6080    18b 
+    openAnimationModal
+arrange.back               L3412    10b 
+    sendToBack
+arrange.backward           L3411    12b 
+    sendBackward
+arrange.forward            L3411    12b 
+    bringForward
+arrange.front              L3411    12b 
+    bringToFront
+arrange.group              L3412    14b 
+    groupSelection
+arrange.ungroup            L3412    16b 
+    ungroupSelection
+brand.logo                 L5375   481b 
+    ()=>{ if(!state.brand?.logo){toast('Carica prima un logo nel brand kit','warn');openBrandKit();return} loadImage(state.brand.logo).then(img=>{ const m
+brand.open                 L5374    12b 
+    openBrandKit
+chart.edit                 L4317    35b 
+    ()=>openChartModal(firstSelected())
+chart.gen                  L3439   170b 
+    ()=>{const el=firstSelected();if(el?.type==='chart'){el.data=(el.data||[]).map((d,i)=>({...d,value:Math.floor(20+Math.random()*80)}));commit('Dati gra
+chart.palette              L3438   160b 
+    ()=>{const el=firstSelected();if(el?.type==='chart'){el.colors=(el.colors||[]).slice();el.colors.push(el.colors.shift());commit('Palette grafico');ren
+color.apply                L6081   105b 
+    ()=>{if(state.selected.length)applyColorToSelection(state.fg);else toast('Seleziona un elemento','warn')}
+comment.list               L4321    16b 
+    openCommentsList
+comment.new                L4320    84b 
+    ()=>openNewCommentModal(state.lastPoint?.x??state.W/2,state.lastPoint?.y??state.H/2)
+comment.resolveAll         L6079   158b 
+    ()=>{state.slides.forEach(s=>(s.comments||[]).forEach(c=>c.resolved=true));commit('Risolvi tutti i commenti');renderAll();toast('Commenti risolti','su
+doc.preset                 L3442    98b 
+    arg=>{const v=String(arg?.arg||arg||'1920x1080').split('x').map(Number);resizeDocument(v[0],v[1])}
+doc.resize                 L3443    95b 
+    ()=>{const W=Number($('docWInput')?.value),H=Number($('docHInput')?.value);resizeDocument(W,H)}
+edit.copy                  L3408    13b 
+    copySelection
+edit.cut                   L3408    12b 
+    cutSelection
+edit.delete                L3407    15b 
+    deleteSelection
+edit.duplicate             L3408    18b 
+    duplicateSelection
+edit.hide                  L3410    22b 
+    toggleSelectionVisible
+edit.lock                  L3409    19b 
+    toggleSelectionLock
+edit.nudge                 L3410    53b 
+    ({dx,dy})=>nudgeSelected(Number(dx)||0,Number(dy)||0)
+edit.paste                 L3409    14b 
+    pasteClipboard
+edit.redo                  L3407     4b 
+    redo
+edit.selectAll             L3409    17b 
+    selectAllElements
+edit.undo                  L3407     4b 
+    undo
+export.html                L4869    10b 
+    exportHtml
+export.images              L4869    15b 
+    exportAllImages
+export.jpeg                L4867    42b 
+    ()=>exportCurrentImage('image/jpeg','jpg')
+export.jpg                 L4867    42b 
+    ()=>exportCurrentImage('image/jpeg','jpg')
+export.json                L5051    11b 
+    downloadDoc
+export.pdf                 L4866     9b 
+    exportPdf
+export.png                 L4866    41b 
+    ()=>exportCurrentImage('image/png','png')
+export.pptx                L4869    10b 
+    exportPptx
+export.print               L5611     9b 
+    exportPdf
+export.review              L6073    18b 
+    exportReviewReport
+export.svg                 L4868     9b 
+    exportSvg
+export.webm                L5610    14b 
+    openVideoModal
+export.webp                L4868    43b 
+    ()=>exportCurrentImage('image/webp','webp')
+file.export.json           L5051    11b 
+    downloadDoc
+file.export.opp            L5051    11b 
+    downloadDoc
+file.export.pdf            L5052     9b 
+    exportPdf
+file.export.pptx           L5052    10b 
+    exportPptx
+file.import.html           L4865    15b 
+    openProjectFile
+file.import.json           L4865    15b 
+    openProjectFile
+file.import.pptx           L5050    10b 
+    importPptx
+file.library               L4864    16b 
+    openLibraryModal
+file.new                   L4863    10b 
+    newProject
+file.open                  L4863    15b 
+    openProjectFile
+file.preferences           L6076    20b 
+    openPreferencesModal
+file.recover               L4864    15b 
+    recoverAutosave
+file.save                  L4863    11b 
+    downloadDoc
+file.saveAs                L4863    13b 
+    saveAsProject
+file.saveToLibrary         L4864    13b 
+    saveToLibrary
+help.about                 L6076    14b 
+    openAboutModal
+help.commands              L6077    18b 
+    openCommandPalette
+help.shortcuts             L6076    18b 
+    openShortcutsModal
+image.addToAssets          L4594   229b 
+    ()=>{const el=selectedImage();if(!el)return;state.assets.push({id:uid('as'),name:el.name||'Immagine',src:el.src,w:el.w,h:el.h,type:'image'});commit('A
+image.adjust               L4579    20b 
+    openImageAdjustModal
+image.background           L4580    22b 
+    imageToSlideBackground
+image.collage              L4580    11b 
+    makeCollage
+image.crop                 L4578    13b 
+    openCropModal
+image.expand               L4579    11b 
+    expandImage
+image.filter.bw            L4587    24b 
+    ()=>setImageFilter('bw')
+image.filter.cool          L4586    26b 
+    ()=>setImageFilter('cool')
+image.filter.dream         L4587    27b 
+    ()=>setImageFilter('dream')
+image.filter.reset         L4588    27b 
+    ()=>setImageFilter('reset')
+image.filter.vintage       L4586    29b 
+    ()=>setImageFilter('vintage')
+image.filter.vivid         L4585    27b 
+    ()=>setImageFilter('vivid')
+image.filter.warm          L4585    26b 
+    ()=>setImageFilter('warm')
+image.flipX                L4592    18b 
+    ()=>flipImage('x')
+image.flipY                L4592    18b 
+    ()=>flipImage('y')
+image.mask.circle          L4589    26b 
+    ()=>setImageMask('circle')
+image.mask.diamond         L4589    27b 
+    ()=>setImageMask('diamond')
+image.mask.heart           L4590    25b 
+    ()=>setImageMask('heart')
+image.mask.none            L4591    22b 
+    ()=>setImageMask(null)
+image.mask.star            L4590    24b 
+    ()=>setImageMask('star')
+image.quick.blur           L4584    37b 
+    ()=>quickImageFilter('blur',2,[0,30])
+image.quick.brightness     L4581    48b 
+    ()=>quickImageFilter('brightness',10,[-100,100])
+image.quick.contrast       L4582    46b 
+    ()=>quickImageFilter('contrast',10,[-100,100])
+image.quick.saturation     L4583    48b 
+    ()=>quickImageFilter('saturation',10,[-100,100])
+image.remove               L4593    15b 
+    deleteSelection
+image.removeBg             L4578    21b 
+    removeImageBackground
+image.replace              L4578    12b 
+    imageReplace
+image.upscale              L4579    12b 
+    upscaleImage
+ink.clear                  L3455   191b 
+    ()=>{const s=currentSlide();if(!s.ink)return;const c=$('inkLayer').getContext('2d');c.clearRect(0,0,$('inkLayer').width,$('inkLayer').height);s.ink=nu
+ink.symmetry               L6088   132b 
+    ()=>{state.inkSymmetry=!state.inkSymmetry;renderStatus();toast('Simmetria '+(state.inkSymmetry?'attiva':'disattivata'),'info',1500)}
+ink.visible                L3456   103b 
+    ()=>{const s=currentSlide();s.inkVisible=s.inkVisible===false;commit('Visibilità disegno');renderAll()}
+insert.audio               L4297    24b 
+    ()=>insertMedia('audio')
+insert.bullets             L4290    31b 
+    ()=>insertTextPreset('bullets')
+insert.chart               L4300   201b 
+    ()=>{const el=chartElement({data:[{label:'Gen',value:42},{label:'Feb',value:58},{label:'Mar',value:36},{label:'Apr',value:71}]});insertElement(el,'Ins
+insert.datetime            L4293    32b 
+    ()=>insertTextPreset('datetime')
+insert.diagram             L4302    13b 
+    insertDiagram
+insert.heading             L4288    31b 
+    ()=>insertTextPreset('heading')
+insert.icons               L4299    26b 
+    ()=>openStickerModal(null)
+insert.image               L4295    12b 
+    insertImages
+insert.mindmap             L4302    13b 
+    insertMindmap
+insert.quote               L4291    29b 
+    ()=>insertTextPreset('quote')
+insert.slideNumber         L4294    35b 
+    ()=>insertTextPreset('slideNumber')
+insert.sticker             L4298    76b 
+    ()=>openStickerModal(firstSelected()?.type==='sticker'?firstSelected():null)
+insert.subheading          L4289    34b 
+    ()=>insertTextPreset('subheading')
+insert.table               L4301   186b 
+    ()=>{const el=tableElement({rows:[['Voce','Valore'],['Primo','10'],['Secondo','20'],['Terzo','30']],header:true});insertElement(el,'Inserisci tabella'
+insert.text                L4287    28b 
+    ()=>insertTextPreset('text')
+insert.video               L4296    24b 
+    ()=>insertMedia('video')
+insert.wordart             L4292    31b 
+    ()=>insertTextPreset('wordart')
+media.preview              L4595    12b 
+    previewMedia
+media.replace              L4595    12b 
+    replaceMedia
+media.volume               L6080    20b 
+    openMediaVolumeModal
+panel.assets               L4315    62b 
+    ()=>{state.leftTab='assets';renderTabsActive();renderAssets()}
+panel.templates            L4316    68b 
+    ()=>{state.leftTab='templates';renderTabsActive();renderTemplates()}
+path.addNode               L6086    21b 
+    addNodeToSelectedPath
+path.close                 L6087     9b 
+    closePath
+path.edit                  L6085   149b 
+    ()=>{const el=pathTargetPath();if(!el)return;state.selected=[el.id];setTool('node');renderAll();toast('Modifica nodi: trascina i punti','info',1800)}
+path.open                  L6087     8b 
+    openPath
+path.reverse               L6087    11b 
+    reversePath
+path.simplify              L6086    20b 
+    simplifySelectedPath
+path.smooth                L6087    10b 
+    smoothPath
+present.blank              L5608    18b 
+    togglePresentBlank
+present.current            L5606    36b 
+    ()=>startPresentation(state.current)
+present.end                L5607    15b 
+    endPresentation
+present.next               L5607    16b 
+    nextPresentation
+present.notes              L5608    20b 
+    togglePresenterNotes
+present.prev               L5607    16b 
+    prevPresentation
+project.info               L6077    20b 
+    openProjectInfoModal
+review.accessibility       L6073    22b 
+    openAccessibilityModal
+review.contrast            L6073    17b 
+    openContrastModal
+review.find                L6072    19b 
+    ()=>openFindModal()
+review.spellcheck          L6072    14b 
+    openSpellModal
+review.stats               L6072    14b 
+    openStatsModal
+shape.duplicate            L3437    18b 
+    duplicateSelection
+shape.exclude              L3436    36b 
+    ()=>combineSelectedShapes('exclude')
+shape.fill.gradient        L6083    21b 
+    openFillGradientModal
+shape.fill.none            L6082   247b 
+    ()=>{const els=selectedElements().filter(e=>['shape','path','boolean'].includes(e.type));if(!els.length){toast('Seleziona una forma','warn');return}el
+shape.fill.pattern         L6083    16b 
+    openPatternModal
+shape.intersect            L3435    38b 
+    ()=>combineSelectedShapes('intersect')
+shape.outline              L6084   358b 
+    ()=>{const els=selectedElements();if(!els.length){toast('Seleziona un elemento','warn');return}els.forEach(e=>{if(e.type==='text'){e.outlineWidth=2;e.
+shape.subtract             L3434    37b 
+    ()=>combineSelectedShapes('subtract')
+shape.toPath               L3432    18b 
+    convertShapeToPath
+shape.union                L3433    34b 
+    ()=>combineSelectedShapes('union')
+share.invite               L6078    24b 
+    ()=>openShareModal(true)
+share.open                 L6078    25b 
+    ()=>openShareModal(false)
+slide.add                  L4303    32b 
+    ()=>addSlideAfter(state.current)
+slide.addAfter             L4304    32b 
+    ()=>addSlideAfter(state.current)
+slide.applyBgAll           L4312   174b 
+    ()=>{const bg=deep(currentSlide().bg);state.slides.forEach(s=>s.bg=deep(bg));commit('Sfondo tutte le slide');renderAll();toast('Sfondo applicato a tut
+slide.audio                L4310    19b 
+    openSlideAudioModal
+slide.audio.remove         L4310    97b 
+    ()=>{currentSlide().audio=null;commit('Rimuovi audio');renderSlidesList();toast('Audio rimosso')}
+slide.background           L4308    24b 
+    openSlideBackgroundModal
+slide.delete               L4306    18b 
+    deleteCurrentSlide
+slide.duplicate            L4305    35b 
+    ()=>duplicateSlideAt(state.current)
+slide.duration             L4309    17b 
+    openDurationModal
+slide.guides               L4311    15b 
+    openGuidesModal
+slide.hide                 L4313   108b 
+    ()=>{const s=currentSlide();s.hidden=!s.hidden;commit(s.hidden?'Nascondi slide':'Mostra slide');renderAll()}
+slide.layout               L4311    15b 
+    openLayoutModal
+slide.moveLeft             L4307    24b 
+    ()=>moveCurrentSlide(-1)
+slide.moveRight            L4307    23b 
+    ()=>moveCurrentSlide(1)
+slide.notes                L4309    14b 
+    openNotesModal
+slide.notes.show           L4314    20b 
+    ()=>openNotesModal()
+slide.rename               L4309    20b 
+    openRenameSlideModal
+slide.theme                L4311    14b 
+    openThemeModal
+slide.transition           L4308    19b 
+    openTransitionModal
+sticker.edit               L4319    37b 
+    ()=>openStickerModal(firstSelected())
+sticker.set                L3441   190b 
+    arg=>{const g=typeof arg==='string'?arg:arg?.arg;const els=selectedElements().filter(e=>e.type==='sticker');if(!g||!els.length)return;els.forEach(e=>e
+style.copy                 L3417     9b 
+    copyStyle
+style.paste                L3417    10b 
+    pasteStyle
+table.addRow               L3440   188b 
+    ()=>{const el=firstSelected();if(el?.type==='table'){const cols=Math.max(1,...el.rows.map(r=>r.length));el.rows.push(Array.from({length:cols},()=>''))
+table.csv                  L6081     8b 
+    tableCsv
+table.edit                 L4318    35b 
+    ()=>openTableModal(firstSelected())
+text.alignCenter           L3423    44b 
+    ()=>updateSelectedTextProp('align','center')
+text.alignJustify          L3425    45b 
+    ()=>updateSelectedTextProp('align','justify')
+text.alignLeft             L3422    42b 
+    ()=>updateSelectedTextProp('align','left')
+text.alignRight            L3424    43b 
+    ()=>updateSelectedTextProp('align','right')
+text.bold                  L3418    57b 
+    ()=>updateSelectedTextProp('bold',!firstSelected()?.bold)
+text.edit                  L3429   162b 
+    ()=>{const el=firstSelected();if(el?.type==='text')startTextEdit(el.id);else if(el?.type==='sticker')openStickerModal(el);else toast('Seleziona un tes
+text.effects               L3431   136b 
+    ()=>{state.propTab='effects';renderProperties();$$('.props-tab').forEach(t=>t.classList.toggle('active',t.dataset.proptab==='effects'))}
+text.fit                   L3430    19b 
+    autoFitSelectedText
+text.improve               L3430    19b 
+    improveSelectedText
+text.italic                L3419    61b 
+    ()=>updateSelectedTextProp('italic',!firstSelected()?.italic)
+text.underline             L3420    67b 
+    ()=>updateSelectedTextProp('underline',!firstSelected()?.underline)
+text.uppercase             L3421   107b 
+    ()=>updateSelectedTextProp('textTransform',firstSelected()?.textTransform==='uppercase'?'none':'uppercase')
+text.valignBottom          L3428    45b 
+    ()=>updateSelectedTextProp('valign','bottom')
+text.valignMiddle          L3427    45b 
+    ()=>updateSelectedTextProp('valign','middle')
+text.valignTop             L3426    42b 
+    ()=>updateSelectedTextProp('valign','top')
+timeline.play              L5609    12b 
+    playTimeline
+timeline.reset             L5609    64b 
+    ()=>{stopTimeline(true);toast('Timeline riavvolta','info',1200)}
+timeline.stop              L5609    22b 
+    ()=>stopTimeline(true)
+tool.brush                 L3453    20b 
+    ()=>setTool('brush')
+tool.comment               L3454    22b 
+    ()=>setTool('comment')
+tool.crop                  L3454    19b 
+    ()=>setTool('crop')
+tool.eraser                L3453    21b 
+    ()=>setTool('eraser')
+tool.eyedropper            L3454    25b 
+    ()=>setTool('eyedropper')
+tool.hand                  L3451    19b 
+    ()=>setTool('hand')
+tool.highlighter           L3453    26b 
+    ()=>setTool('highlighter')
+tool.node                  L3452    19b 
+    ()=>setTool('node')
+tool.pen                   L3452    18b 
+    ()=>setTool('pen')
+tool.select                L3451    21b 
+    ()=>setTool('select')
+tool.text                  L3452    19b 
+    ()=>setTool('text')
+tool.wand                  L3454    19b 
+    ()=>setTool('wand')
+tool.zoom                  L3451    19b 
+    ()=>setTool('zoom')
+version.activity           L6074    17b 
+    openActivityModal
+version.compare            L6075    32b 
+    ()=>openVersionsModal('compare')
+version.list               L6074    23b 
+    ()=>openVersionsModal()
+version.restore            L6075    23b 
+    ()=>openVersionsModal()
+version.save               L6074    17b 
+    ()=>saveVersion()
+video.record               L5610    14b 
+    openVideoModal
+view.focus                 L6091   210b 
+    ()=>{state.focusMode=!state.focusMode;document.body.classList.toggle('focus-mode',state.focusMode);setTimeout(fitZoom,40);toast(state.focusMode?'Modal
+view.fullscreen            L6090   189b ⚠messaggio-negativo
+    async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()}catch(e){toast('Sc
+view.grid                  L3444    72b 
+    ()=>{state.showGrid=!state.showGrid;renderCurrentSlide();renderStatus()}
+view.panels                L3448   111b 
+    ()=>{$('leftPanel').classList.toggle('collapsed');$('rightPanel').classList.toggle('collapsed');renderStatus()}
+view.present               L3450    24b  ⧉dup
+    ()=>startPresentation(0)
+view.present               L5606    24b  ⧉dup
+    ()=>startPresentation(0)
+view.presenter             L3450    53b 
+    ()=>startPresentation(state.current,{presenter:true})
+view.rulers                L3446    76b 
+    ()=>{state.showRulers=!state.showRulers;renderCurrentSlide();renderStatus()}
+view.snap                  L3445   115b 
+    ()=>{state.snapObjects=!state.snapObjects;renderStatus();toast('Snap '+(state.snapObjects?'attivo':'disattivato'))}
+view.theme                 L6092   189b 
+    ()=>{applyUiTheme(state.settings.uiTheme==='contrast'?'default':'contrast');saveSettings();toast('Tema '+(state.settings.uiTheme==='contrast'?'contras
+view.timeline              L3449   103b 
+    ()=>{const t=$('timeline');t.classList.toggle('open');if(t.classList.contains('open'))renderTimeline()}
+view.zoom100               L3447    14b 
+    ()=>setZoom(1)
+view.zoomFit               L3447     7b 
+    fitZoom
+view.zoomIn                L6089    27b 
+    ()=>setZoom(state.zoom*1.2)
+view.zoomOut               L6089    27b 
+    ()=>setZoom(state.zoom/1.2)
+view.zoomSelection         L3447    15b 
+    zoomToSelection
+workspace.graphic          L6093    30b 
+    ()=>switchWorkspace('Grafica')
+workspace.photo            L6093    27b 
+    ()=>switchWorkspace('Foto')
+workspace.present          L6094    36b 
+    ()=>switchWorkspace('Presentazione')
+workspace.review           L6094    32b 
+    ()=>switchWorkspace('Revisione')
+workspace.vector           L6095    33b 
+    ()=>switchWorkspace('Vettoriale')

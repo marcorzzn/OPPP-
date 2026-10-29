@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nuovo effetto</title>
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; padding: 18px; background: #11151f; color: #e9eef9; }
+      h2 { margin: 0 0 10px; font-size: 1.1rem; }
+      canvas { max-width: 100%; height: auto; border-radius: 8px; display: block; margin-top: 12px; background: #000; }
+      button { margin-top: 10px; margin-right: 8px; padding: 9px 14px; border: 0; border-radius: 8px; background: #4f8cff; color: #fff; font: inherit; cursor: pointer; }
+      body.embed h2 { display: none; }
+    </style>
+  </head>
+  <body>
+    <!-- Copia questo file, rinominalo, aggiungi la tua logica di trasformazione nel
+         canvas e una voce in effects/manifest.json. Fatto. -->
+    <h2>Nuovo effetto</h2>
+    <input type="file" id="file" accept="image/*" />
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <button id="save">Scarica PNG</button>
+    <button id="send" style="display: none">Invia a OPP</button>
+
+    <script src="./sdk.js"></script>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      const send = document.getElementById("send");
+      window.getEffectCanvas = () => canvas;
+
+      if (window.OPPFrame.isEmbed()) send.style.display = "inline-block";
+
+      document.getElementById("file").addEventListener("change", (e) => {
+        const file = e.target.files && e.target.files[0];
+        if (!file) return;
+        const img = new Image();
+        img.onload = () => {
+          canvas.width = img.naturalWidth;
+          canvas.height = img.naturalHeight;
+          ctx.drawImage(img, 0, 0);
+          // === QUI la tua trasformazione ===
+          // esempio: ctx.filter = "sepia(0.6) contrast(1.1)";
+        };
+        img.src = URL.createObjectURL(file);
+      });
+
+      document.getElementById("save").onclick = () => {
+        const a = document.createElement("a");
+        a.download = "effetto.png";
+        a.href = canvas.toDataURL("image/png");
+        a.click();
+      };
+      send.onclick = () => OPPFrame.sendImage(canvas, "effetto.png");
+    </script>
+  </body>
+</html>

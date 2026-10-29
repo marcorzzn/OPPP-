@@ -1,0 +1,3438 @@
+{
+  "summary": {
+    "file": {
+      "lines": 6302,
+      "chars": 438574,
+      "kb": 428.3
+    },
+    "commands": {
+      "declared": 117,
+      "referencedFromUi": 320,
+      "missing": [
+        {
+          "id": "file.new",
+          "line": 3489
+        },
+        {
+          "id": "file.open",
+          "line": 3490
+        },
+        {
+          "id": "file.save",
+          "line": 3491
+        },
+        {
+          "id": "file.saveAs",
+          "line": 3492
+        },
+        {
+          "id": "file.recover",
+          "line": 3493
+        },
+        {
+          "id": "file.import.pptx",
+          "line": 3496
+        },
+        {
+          "id": "insert.image",
+          "line": 3496
+        },
+        {
+          "id": "file.import.json",
+          "line": 3497
+        },
+        {
+          "id": "file.import.html",
+          "line": 3497
+        },
+        {
+          "id": "export.pdf",
+          "line": 3500
+        },
+        {
+          "id": "export.png",
+          "line": 3500
+        },
+        {
+          "id": "export.pptx",
+          "line": 3501
+        },
+        {
+          "id": "export.html",
+          "line": 3502
+        },
+        {
+          "id": "export.webm",
+          "line": 3502
+        },
+        {
+          "id": "export.jpg",
+          "line": 3503
+        },
+        {
+          "id": "export.webp",
+          "line": 3503
+        },
+        {
+          "id": "export.svg",
+          "line": 3503
+        },
+        {
+          "id": "share.open",
+          "line": 3506
+        },
+        {
+          "id": "export.zip",
+          "line": 3506
+        },
+        {
+          "id": "export.print",
+          "line": 3507
+        },
+        {
+          "id": "share.invite",
+          "line": 3507
+        },
+        {
+          "id": "file.preferences",
+          "line": 3510
+        },
+        {
+          "id": "help.shortcuts",
+          "line": 3510
+        },
+        {
+          "id": "help.about",
+          "line": 3511
+        },
+        {
+          "id": "help.commands",
+          "line": 3511
+        },
+        {
+          "id": "edit.undo",
+          "line": 3516
+        },
+        {
+          "id": "edit.redo",
+          "line": 3517
+        },
+        {
+          "id": "edit.paste",
+          "line": 3518
+        },
+        {
+          "id": "edit.cut",
+          "line": 3518
+        },
+        {
+          "id": "edit.copy",
+          "line": 3519
+        },
+        {
+          "id": "edit.duplicate",
+          "line": 3519
+        },
+        {
+          "id": "edit.delete",
+          "line": 3520
+        },
+        {
+          "id": "slide.add",
+          "line": 3523
+        },
+        {
+          "id": "slide.duplicate",
+          "line": 3523
+        },
+        {
+          "id": "slide.layout",
+          "line": 3524
+        },
+        {
+          "id": "slide.background",
+          "line": 3524
+        },
+        {
+          "id": "slide.theme",
+          "line": 3525
+        },
+        {
+          "id": "slide.delete",
+          "line": 3525
+        },
+        {
+          "id": "insert.text",
+          "line": 3528
+        },
+        {
+          "id": "insert.heading",
+          "line": 3528
+        },
+        {
+          "id": "insert.subheading",
+          "line": 3529
+        },
+        {
+          "id": "insert.bullets",
+          "line": 3529
+        },
+        {
+          "id": "insert.quote",
+          "line": 3530
+        },
+        {
+          "id": "insert.wordart",
+          "line": 3530
+        },
+        {
+          "id": "insert.sticker",
+          "line": 3531
+        },
+        {
+          "id": "arrange.front",
+          "line": 3539
+        },
+        {
+          "id": "arrange.forward",
+          "line": 3539
+        },
+        {
+          "id": "arrange.backward",
+          "line": 3540
+        },
+        {
+          "id": "arrange.back",
+          "line": 3540
+        },
+        {
+          "id": "arrange.group",
+          "line": 3541
+        },
+        {
+          "id": "arrange.ungroup",
+          "line": 3541
+        },
+        {
+          "id": "align.left",
+          "line": 3542
+        },
+        {
+          "id": "view.present",
+          "line": 3545
+        },
+        {
+          "id": "view.presenter",
+          "line": 3546
+        },
+        {
+          "id": "slide.notes",
+          "line": 3547
+        },
+        {
+          "id": "slide.transition",
+          "line": 3548
+        },
+        {
+          "id": "anim.open",
+          "line": 3549
+        },
+        {
+          "id": "comment.new",
+          "line": 3553
+        },
+        {
+          "id": "insert.image",
+          "line": 3558
+        },
+        {
+          "id": "insert.video",
+          "line": 3558
+        },
+        {
+          "id": "insert.audio",
+          "line": 3559
+        },
+        {
+          "id": "panel.assets",
+          "line": 3559
+        },
+        {
+          "id": "image.background",
+          "line": 3560
+        },
+        {
+          "id": "ai.art",
+          "line": 3563
+        },
+        {
+          "id": "ai.pattern",
+          "line": 3563
+        },
+        {
+          "id": "ai.deck",
+          "line": 3564
+        },
+        {
+          "id": "ai.palette",
+          "line": 3564
+        },
+        {
+          "id": "insert.chart",
+          "line": 3567
+        },
+        {
+          "id": "insert.table",
+          "line": 3567
+        },
+        {
+          "id": "insert.diagram",
+          "line": 3568
+        },
+        {
+          "id": "insert.mindmap",
+          "line": 3568
+        },
+        {
+          "id": "insert.text",
+          "line": 3572
+        },
+        {
+          "id": "insert.heading",
+          "line": 3572
+        },
+        {
+          "id": "insert.quote",
+          "line": 3573
+        },
+        {
+          "id": "insert.wordart",
+          "line": 3573
+        },
+        {
+          "id": "insert.sticker",
+          "line": 3574
+        },
+        {
+          "id": "insert.icons",
+          "line": 3574
+        },
+        {
+          "id": "comment.new",
+          "line": 3577
+        },
+        {
+          "id": "insert.datetime",
+          "line": 3577
+        },
+        {
+          "id": "insert.slideNumber",
+          "line": 3578
+        },
+        {
+          "id": "slide.guides",
+          "line": 3578
+        },
+        {
+          "id": "ink.clear",
+          "line": 3595
+        },
+        {
+          "id": "ink.visible",
+          "line": 3595
+        },
+        {
+          "id": "ink.symmetry",
+          "line": 3596
+        },
+        {
+          "id": "path.smooth",
+          "line": 3596
+        },
+        {
+          "id": "insert.image",
+          "line": 3602
+        },
+        {
+          "id": "image.replace",
+          "line": 3602
+        },
+        {
+          "id": "image.crop",
+          "line": 3603
+        },
+        {
+          "id": "image.removeBg",
+          "line": 3603
+        },
+        {
+          "id": "image.adjust",
+          "line": 3604
+        },
+        {
+          "id": "image.expand",
+          "line": 3604
+        },
+        {
+          "id": "image.upscale",
+          "line": 3605
+        },
+        {
+          "id": "image.collage",
+          "line": 3605
+        },
+        {
+          "id": "image.quick.brightness",
+          "line": 3608
+        },
+        {
+          "id": "image.quick.contrast",
+          "line": 3608
+        },
+        {
+          "id": "image.quick.saturation",
+          "line": 3609
+        },
+        {
+          "id": "image.quick.blur",
+          "line": 3609
+        },
+        {
+          "id": "image.filter.bw",
+          "line": 3610
+        },
+        {
+          "id": "image.filter.reset",
+          "line": 3610
+        },
+        {
+          "id": "image.filter.vivid",
+          "line": 3613
+        },
+        {
+          "id": "image.filter.warm",
+          "line": 3613
+        },
+        {
+          "id": "image.filter.cool",
+          "line": 3614
+        },
+        {
+          "id": "image.filter.vintage",
+          "line": 3614
+        },
+        {
+          "id": "image.filter.bw",
+          "line": 3615
+        },
+        {
+          "id": "image.filter.dream",
+          "line": 3615
+        },
+        {
+          "id": "image.mask.circle",
+          "line": 3618
+        },
+        {
+          "id": "image.mask.diamond",
+          "line": 3618
+        },
+        {
+          "id": "image.mask.star",
+          "line": 3619
+        },
+        {
+          "id": "image.mask.heart",
+          "line": 3619
+        },
+        {
+          "id": "image.mask.none",
+          "line": 3620
+        },
+        {
+          "id": "image.flipX",
+          "line": 3623
+        },
+        {
+          "id": "image.flipY",
+          "line": 3623
+        },
+        {
+          "id": "image.background",
+          "line": 3624
+        },
+        {
+          "id": "edit.delete",
+          "line": 3624
+        },
+        {
+          "id": "shape.union",
+          "line": 3633
+        },
+        {
+          "id": "shape.subtract",
+          "line": 3633
+        },
+        {
+          "id": "shape.intersect",
+          "line": 3634
+        },
+        {
+          "id": "shape.exclude",
+          "line": 3634
+        },
+        {
+          "id": "shape.toPath",
+          "line": 3635
+        },
+        {
+          "id": "shape.outline",
+          "line": 3635
+        },
+        {
+          "id": "path.addNode",
+          "line": 3638
+        },
+        {
+          "id": "path.simplify",
+          "line": 3638
+        },
+        {
+          "id": "path.close",
+          "line": 3639
+        },
+        {
+          "id": "path.open",
+          "line": 3639
+        },
+        {
+          "id": "path.reverse",
+          "line": 3640
+        },
+        {
+          "id": "path.edit",
+          "line": 3640
+        },
+        {
+          "id": "shape.fill.none",
+          "line": 3644
+        },
+        {
+          "id": "shape.fill.gradient",
+          "line": 3644
+        },
+        {
+          "id": "shape.fill.pattern",
+          "line": 3645
+        },
+        {
+          "id": "align.left",
+          "line": 3648
+        },
+        {
+          "id": "align.centerH",
+          "line": 3648
+        },
+        {
+          "id": "align.right",
+          "line": 3648
+        },
+        {
+          "id": "align.top",
+          "line": 3649
+        },
+        {
+          "id": "align.centerV",
+          "line": 3649
+        },
+        {
+          "id": "align.bottom",
+          "line": 3649
+        },
+        {
+          "id": "view.present",
+          "line": 3654
+        },
+        {
+          "id": "present.current",
+          "line": 3654
+        },
+        {
+          "id": "view.presenter",
+          "line": 3655
+        },
+        {
+          "id": "slide.transition",
+          "line": 3658
+        },
+        {
+          "id": "anim.open",
+          "line": 3658
+        },
+        {
+          "id": "slide.notes",
+          "line": 3659
+        },
+        {
+          "id": "slide.audio",
+          "line": 3659
+        },
+        {
+          "id": "slide.duration",
+          "line": 3660
+        },
+        {
+          "id": "view.timeline",
+          "line": 3663
+        },
+        {
+          "id": "timeline.play",
+          "line": 3663
+        },
+        {
+          "id": "timeline.stop",
+          "line": 3664
+        },
+        {
+          "id": "export.webm",
+          "line": 3667
+        },
+        {
+          "id": "video.record",
+          "line": 3667
+        },
+        {
+          "id": "slide.add",
+          "line": 3670
+        },
+        {
+          "id": "slide.duplicate",
+          "line": 3670
+        },
+        {
+          "id": "panel.templates",
+          "line": 3671
+        },
+        {
+          "id": "slide.theme",
+          "line": 3671
+        },
+        {
+          "id": "insert.video",
+          "line": 3676
+        },
+        {
+          "id": "insert.audio",
+          "line": 3676
+        },
+        {
+          "id": "media.preview",
+          "line": 3677
+        },
+        {
+          "id": "edit.delete",
+          "line": 3677
+        },
+        {
+          "id": "view.timeline",
+          "line": 3680
+        },
+        {
+          "id": "timeline.play",
+          "line": 3680
+        },
+        {
+          "id": "timeline.stop",
+          "line": 3681
+        },
+        {
+          "id": "timeline.reset",
+          "line": 3681
+        },
+        {
+          "id": "slide.transition",
+          "line": 3684
+        },
+        {
+          "id": "anim.open",
+          "line": 3684
+        },
+        {
+          "id": "slide.duration",
+          "line": 3685
+        },
+        {
+          "id": "video.record",
+          "line": 3688
+        },
+        {
+          "id": "export.webm",
+          "line": 3688
+        },
+        {
+          "id": "slide.audio",
+          "line": 3691
+        },
+        {
+          "id": "media.volume",
+          "line": 3691
+        },
+        {
+          "id": "slide.audio.remove",
+          "line": 3692
+        },
+        {
+          "id": "comment.new",
+          "line": 3697
+        },
+        {
+          "id": "comment.toggle",
+          "line": 3697
+        },
+        {
+          "id": "comment.list",
+          "line": 3698
+        },
+        {
+          "id": "comment.resolveAll",
+          "line": 3698
+        },
+        {
+          "id": "version.save",
+          "line": 3701
+        },
+        {
+          "id": "version.list",
+          "line": 3701
+        },
+        {
+          "id": "version.activity",
+          "line": 3702
+        },
+        {
+          "id": "review.find",
+          "line": 3705
+        },
+        {
+          "id": "review.spellcheck",
+          "line": 3705
+        },
+        {
+          "id": "ai.improve",
+          "line": 3706
+        },
+        {
+          "id": "review.stats",
+          "line": 3706
+        },
+        {
+          "id": "review.accessibility",
+          "line": 3709
+        },
+        {
+          "id": "review.contrast",
+          "line": 3709
+        },
+        {
+          "id": "help.shortcuts",
+          "line": 3710
+        },
+        {
+          "id": "version.compare",
+          "line": 3713
+        },
+        {
+          "id": "version.restore",
+          "line": 3713
+        },
+        {
+          "id": "export.review",
+          "line": 3714
+        },
+        {
+          "id": "view.zoomFit",
+          "line": 3719
+        },
+        {
+          "id": "view.zoom100",
+          "line": 3719
+        },
+        {
+          "id": "view.zoomSelection",
+          "line": 3720
+        },
+        {
+          "id": "view.zoomIn",
+          "line": 3720
+        },
+        {
+          "id": "view.zoomOut",
+          "line": 3721
+        },
+        {
+          "id": "view.grid",
+          "line": 3724
+        },
+        {
+          "id": "view.snap",
+          "line": 3724
+        },
+        {
+          "id": "view.rulers",
+          "line": 3725
+        },
+        {
+          "id": "slide.guides",
+          "line": 3725
+        },
+        {
+          "id": "view.panels",
+          "line": 3726
+        },
+        {
+          "id": "view.timeline",
+          "line": 3729
+        },
+        {
+          "id": "view.fullscreen",
+          "line": 3729
+        },
+        {
+          "id": "view.focus",
+          "line": 3730
+        },
+        {
+          "id": "view.theme",
+          "line": 3730
+        },
+        {
+          "id": "workspace.present",
+          "line": 3733
+        },
+        {
+          "id": "workspace.graphic",
+          "line": 3733
+        },
+        {
+          "id": "workspace.photo",
+          "line": 3734
+        },
+        {
+          "id": "workspace.vector",
+          "line": 3734
+        },
+        {
+          "id": "workspace.video",
+          "line": 3735
+        },
+        {
+          "id": "workspace.review",
+          "line": 3735
+        },
+        {
+          "id": "view.present",
+          "line": 3738
+        },
+        {
+          "id": "view.presenter",
+          "line": 3738
+        },
+        {
+          "id": "help.shortcuts",
+          "line": 3739
+        },
+        {
+          "id": "insert.text",
+          "line": 2591
+        },
+        {
+          "id": "insert.image",
+          "line": 2591
+        },
+        {
+          "id": "ai.art",
+          "line": 2591
+        },
+        {
+          "id": "arrange.front",
+          "line": 2602
+        },
+        {
+          "id": "arrange.forward",
+          "line": 2602
+        },
+        {
+          "id": "arrange.backward",
+          "line": 2602
+        },
+        {
+          "id": "arrange.back",
+          "line": 2602
+        },
+        {
+          "id": "arrange.group",
+          "line": 2603
+        },
+        {
+          "id": "arrange.ungroup",
+          "line": 2603
+        },
+        {
+          "id": "edit.duplicate",
+          "line": 2603
+        },
+        {
+          "id": "edit.delete",
+          "line": 2603
+        },
+        {
+          "id": "align.left",
+          "line": 2614
+        },
+        {
+          "id": "align.centerH",
+          "line": 2614
+        },
+        {
+          "id": "align.right",
+          "line": 2614
+        },
+        {
+          "id": "align.top",
+          "line": 2614
+        },
+        {
+          "id": "align.centerV",
+          "line": 2614
+        },
+        {
+          "id": "align.bottom",
+          "line": 2614
+        },
+        {
+          "id": "align.distributeH",
+          "line": 2614
+        },
+        {
+          "id": "align.distributeV",
+          "line": 2614
+        },
+        {
+          "id": "edit.lock",
+          "line": 2615
+        },
+        {
+          "id": "edit.hide",
+          "line": 2615
+        },
+        {
+          "id": "edit.copy",
+          "line": 2615
+        },
+        {
+          "id": "style.copy",
+          "line": 2615
+        },
+        {
+          "id": "style.paste",
+          "line": 2615
+        },
+        {
+          "id": "text.bold",
+          "line": 2634
+        },
+        {
+          "id": "text.italic",
+          "line": 2634
+        },
+        {
+          "id": "text.underline",
+          "line": 2634
+        },
+        {
+          "id": "text.uppercase",
+          "line": 2634
+        },
+        {
+          "id": "text.alignLeft",
+          "line": 2635
+        },
+        {
+          "id": "text.alignCenter",
+          "line": 2635
+        },
+        {
+          "id": "text.alignRight",
+          "line": 2635
+        },
+        {
+          "id": "text.alignJustify",
+          "line": 2635
+        },
+        {
+          "id": "text.valignTop",
+          "line": 2636
+        },
+        {
+          "id": "text.valignMiddle",
+          "line": 2636
+        },
+        {
+          "id": "text.valignBottom",
+          "line": 2636
+        },
+        {
+          "id": "text.edit",
+          "line": 2644
+        },
+        {
+          "id": "text.fit",
+          "line": 2644
+        },
+        {
+          "id": "text.improve",
+          "line": 2644
+        },
+        {
+          "id": "text.effects",
+          "line": 2644
+        },
+        {
+          "id": "shape.duplicate",
+          "line": 2657
+        },
+        {
+          "id": "shape.toPath",
+          "line": 2657
+        },
+        {
+          "id": "shape.union",
+          "line": 2657
+        },
+        {
+          "id": "shape.subtract",
+          "line": 2657
+        },
+        {
+          "id": "shape.intersect",
+          "line": 2657
+        },
+        {
+          "id": "shape.exclude",
+          "line": 2657
+        },
+        {
+          "id": "path.edit",
+          "line": 2668
+        },
+        {
+          "id": "path.addNode",
+          "line": 2668
+        },
+        {
+          "id": "path.simplify",
+          "line": 2668
+        },
+        {
+          "id": "path.close",
+          "line": 2668
+        },
+        {
+          "id": "path.open",
+          "line": 2668
+        },
+        {
+          "id": "shape.toPath",
+          "line": 2677
+        },
+        {
+          "id": "edit.duplicate",
+          "line": 2677
+        },
+        {
+          "id": "image.replace",
+          "line": 2681
+        },
+        {
+          "id": "image.crop",
+          "line": 2681
+        },
+        {
+          "id": "image.removeBg",
+          "line": 2681
+        },
+        {
+          "id": "image.adjust",
+          "line": 2682
+        },
+        {
+          "id": "image.expand",
+          "line": 2682
+        },
+        {
+          "id": "image.upscale",
+          "line": 2682
+        },
+        {
+          "id": "image.remove",
+          "line": 2682
+        },
+        {
+          "id": "image.collage",
+          "line": 2688
+        },
+        {
+          "id": "image.background",
+          "line": 2688
+        },
+        {
+          "id": "chart.edit",
+          "line": 2694
+        },
+        {
+          "id": "chart.palette",
+          "line": 2694
+        },
+        {
+          "id": "chart.gen",
+          "line": 2694
+        },
+        {
+          "id": "table.edit",
+          "line": 2702
+        },
+        {
+          "id": "table.csv",
+          "line": 2702
+        },
+        {
+          "id": "table.addRow",
+          "line": 2702
+        },
+        {
+          "id": "sticker.set",
+          "line": 2708
+        },
+        {
+          "id": "media.preview",
+          "line": 2717
+        },
+        {
+          "id": "media.replace",
+          "line": 2717
+        },
+        {
+          "id": "media.remove",
+          "line": 2717
+        },
+        {
+          "id": "image.filter.vivid",
+          "line": 2751
+        },
+        {
+          "id": "image.filter.warm",
+          "line": 2751
+        },
+        {
+          "id": "image.filter.cool",
+          "line": 2751
+        },
+        {
+          "id": "image.filter.bw",
+          "line": 2751
+        },
+        {
+          "id": "image.filter.reset",
+          "line": 2751
+        },
+        {
+          "id": "slide.background",
+          "line": 2771
+        },
+        {
+          "id": "slide.applyBgAll",
+          "line": 2771
+        },
+        {
+          "id": "slide.theme",
+          "line": 2771
+        },
+        {
+          "id": "slide.audio",
+          "line": 2779
+        },
+        {
+          "id": "slide.notes",
+          "line": 2779
+        },
+        {
+          "id": "slide.duplicate",
+          "line": 2779
+        },
+        {
+          "id": "slide.delete",
+          "line": 2779
+        },
+        {
+          "id": "doc.preset",
+          "line": 2782
+        },
+        {
+          "id": "doc.preset",
+          "line": 2782
+        },
+        {
+          "id": "doc.preset",
+          "line": 2782
+        },
+        {
+          "id": "doc.preset",
+          "line": 2782
+        },
+        {
+          "id": "doc.preset",
+          "line": 2782
+        },
+        {
+          "id": "doc.resize",
+          "line": 2785
+        },
+        {
+          "id": "project.info",
+          "line": 2785
+        },
+        {
+          "id": "ai.title",
+          "line": 2792
+        },
+        {
+          "id": "ai.improve",
+          "line": 2792
+        },
+        {
+          "id": "ai.palette",
+          "line": 2793
+        },
+        {
+          "id": "ai.layout",
+          "line": 2793
+        },
+        {
+          "id": "ai.deck",
+          "line": 2793
+        },
+        {
+          "id": "ai.art",
+          "line": 2794
+        },
+        {
+          "id": "ai.pattern",
+          "line": 2794
+        },
+        {
+          "id": "ai.image.enhance",
+          "line": 2795
+        },
+        {
+          "id": "ai.image.removeBg",
+          "line": 2795
+        },
+        {
+          "id": "ai.deck",
+          "line": 2797
+        },
+        {
+          "id": "${escAttr(cmd)}",
+          "line": 3472
+        },
+        {
+          "id": "color.apply",
+          "line": 3643
+        },
+        {
+          "id": "color.apply",
+          "line": 6222
+        },
+        {
+          "id": "${c}",
+          "line": 5976
+        },
+        {
+          "id": "file.save",
+          "line": 5976
+        },
+        {
+          "id": "export.review",
+          "line": 5976
+        },
+        {
+          "id": "export.quick",
+          "line": 2999
+        },
+        {
+          "id": "file.save",
+          "line": 3000
+        },
+        {
+          "id": "view.panels",
+          "line": 6166
+        },
+        {
+          "id": "view.grid",
+          "line": 6208
+        },
+        {
+          "id": "view.snap",
+          "line": 6209
+        },
+        {
+          "id": "view.rulers",
+          "line": 6210
+        }
+      ],
+      "orphans": [
+        "align.left",
+        "align.centerH",
+        "align.bottom",
+        "align.distributeH",
+        "text.bold",
+        "text.italic",
+        "text.underline",
+        "text.uppercase",
+        "text.alignLeft",
+        "text.alignCenter",
+        "text.alignRight",
+        "text.alignJustify",
+        "text.valignTop",
+        "text.valignMiddle",
+        "text.valignBottom",
+        "text.edit",
+        "text.effects",
+        "shape.union",
+        "shape.subtract",
+        "shape.intersect",
+        "shape.exclude",
+        "chart.palette",
+        "chart.gen",
+        "table.addRow",
+        "doc.resize",
+        "view.grid",
+        "view.snap",
+        "view.rulers",
+        "view.panels",
+        "view.timeline",
+        "view.present",
+        "tool.select",
+        "tool.text",
+        "tool.brush",
+        "tool.eyedropper",
+        "ink.clear",
+        "ink.visible",
+        "slide.guides.clear",
+        "text",
+        "heading",
+        "subheading",
+        "bullets",
+        "quote",
+        "wordart",
+        "datetime",
+        "slideNumber",
+        "insert.text",
+        "insert.heading",
+        "insert.subheading",
+        "insert.bullets",
+        "insert.quote",
+        "insert.wordart",
+        "insert.datetime",
+        "insert.slideNumber",
+        "insert.video",
+        "insert.audio",
+        "insert.sticker",
+        "insert.icons",
+        "insert.chart",
+        "insert.table",
+        "slide.add",
+        "slide.addAfter",
+        "slide.duplicate",
+        "slide.moveLeft",
+        "slide.applyBgAll",
+        "slide.hide",
+        "slide.notes.show",
+        "panel.assets",
+        "panel.templates",
+        "chart.edit",
+        "table.edit",
+        "sticker.edit",
+        "comment.new",
+        "comment.toggle",
+        "onClose",
+        "vivid",
+        "warm",
+        "cool",
+        "vintage",
+        "bw",
+        "dream",
+        "image.quick.brightness",
+        "image.quick.contrast",
+        "image.quick.saturation",
+        "image.quick.blur",
+        "image.filter.vivid",
+        "image.filter.cool",
+        "image.filter.bw",
+        "image.filter.reset",
+        "image.mask.circle",
+        "image.mask.star",
+        "image.mask.none",
+        "image.flipX",
+        "image.addToAssets",
+        "export.jpeg",
+        "export.webp",
+        "ai.art",
+        "ai.image.enhance",
+        "brand.logo",
+        "brand.apply",
+        "els",
+        "review.find",
+        "version.save",
+        "version.restore",
+        "share.open",
+        "comment.resolveAll",
+        "shape.fill.none",
+        "shape.outline",
+        "path.edit",
+        "ink.symmetry",
+        "view.zoomIn",
+        "view.fullscreen",
+        "view.focus",
+        "view.theme",
+        "workspace.graphic",
+        "workspace.present",
+        "workspace.vector"
+      ]
+    },
+    "ribbonButtons": 208,
+    "ribbonTools": [
+      "brush",
+      "crop",
+      "eraser",
+      "eyedropper",
+      "hand",
+      "highlighter",
+      "line",
+      "node",
+      "pen",
+      "select",
+      "wand",
+      "zoom"
+    ],
+    "tabs": {
+      "inHtml": [
+        "File",
+        "Home",
+        "Inserisci",
+        "Disegna",
+        "Foto",
+        "Vettore",
+        "Presentazione",
+        "Video",
+        "Revisione",
+        "Visualizza"
+      ],
+      "rendered": [
+        "Disegna",
+        "File",
+        "Foto",
+        "Home",
+        "Inserisci",
+        "Presentazione",
+        "Revisione",
+        "Vettore",
+        "Video",
+        "Visualizza"
+      ],
+      "missingTabBodies": [],
+      "extraBodies": []
+    },
+    "shortcuts": [],
+    "shortcutsToMissing": [],
+    "htmlIds": 264,
+    "boundIds": 114,
+    "possiblyUnboundHtmlIds": [
+      "1",
+      "2",
+      "2147483648",
+      "2147483649",
+      "aiArtPreview",
+      "aiDeckCount",
+      "aiDeckReplace",
+      "aiDeckTheme",
+      "aiDeckTone",
+      "aiDeckTopic",
+      "aiTitleResults",
+      "animDelay",
+      "animDurVal",
+      "animType",
+      "app",
+      "assetSearch",
+      "assetUpload",
+      "assetsBody",
+      "audioRemove",
+      "audioVolVal",
+      "autosaveBadge",
+      "autosaveText",
+      "bar",
+      "bgAll",
+      "bgAngleVal",
+      "bgColor2Modal",
+      "bgColorModal",
+      "bgEdge",
+      "bgPresets",
+      "bgPreview",
+      "bgTolVal",
+      "bgTypeModal",
+      "brandC1",
+      "brandC2",
+      "brandC3",
+      "brandC4",
+      "brandFont1",
+      "brandFont2",
+      "brandName",
+      "canvasSize",
+      "chartData",
+      "chartType",
+      "chartValues",
+      "cmdResults",
+      "commentText",
+      "contrastPreview",
+      "contrastResult",
+      "counter",
+      "cropB",
+      "cropCanvas",
+      "cropInfo",
+      "cropL",
+      "cropR",
+      "cropT",
+      "ctxMenu",
+      "deck",
+      "docHInput",
+      "docWInput",
+      "elementsLayer",
+      "fgBg",
+      "fgPreview",
+      "findResults",
+      "full",
+      "gradAngleVal",
+      "gradPreview",
+      "gridOverlay",
+      "guideH",
+      "guideV",
+      "inkLayer",
+      "layerCount",
+      "layersList",
+      "leftAssets",
+      "leftSlides",
+      "leftTemplates",
+      "mediaVolVal",
+      "modalBg",
+      "modalBody",
+      "modalCard",
+      "modalClose",
+      "modalFoot",
+      "modalIcon",
+      "modalSub",
+      "modalTitle",
+      "next",
+      "notesText",
+      "opp-export-data",
+      "overlayLayer",
+      "pPresenter",
+      "pProgress",
+      "pTop",
+      "pTopText",
+      "patBg",
+      "patFg",
+      "patPreview",
+      "patScale",
+      "patType",
+      "pos",
+      "posStat",
+      "ppCounter",
+      "ppNotes",
+      "ppTime",
+      "ppTitle",
+      "prefAutosave",
+      "prefSpell",
+      "prefTheme",
+      "prefTips",
+      "prefTransition",
+      "presentation",
+      "prev",
+      "printArea",
+      "propertiesBody",
+      "replyText",
+      "ribbon",
+      "rightPanel",
+      "rulerH",
+      "rulerV",
+      "savePill",
+      "savePillText",
+      "selStat",
+      "shareText",
+      "sizeStat",
+      "slideCounter",
+      "slideSurface",
+      "slideWrapper",
+      "slidesList",
+      "stage",
+      "stickerGlyph",
+      "swatches",
+      "tableAccent",
+      "tableData",
+      "tableHeader",
+      "templatesBody",
+      "timeline",
+      "tlPlayhead",
+      "tlRuler",
+      "tlTime",
+      "tlTrack",
+      "toastWrap",
+      "toolStat",
+      "top",
+      "transAll",
+      "transDurVal",
+      "transQuick",
+      "transSel",
+      "webAudio",
+      "webBar",
+      "webDur",
+      "webInfo",
+      "webRes",
+      "webSecs"
+    ],
+    "unusedFunctions": []
+  },
+  "declared": [
+    {
+      "id": "align.left",
+      "line": 3413
+    },
+    {
+      "id": "align.centerH",
+      "line": 3414
+    },
+    {
+      "id": "align.bottom",
+      "line": 3415
+    },
+    {
+      "id": "align.distributeH",
+      "line": 3416
+    },
+    {
+      "id": "text.bold",
+      "line": 3418
+    },
+    {
+      "id": "text.italic",
+      "line": 3419
+    },
+    {
+      "id": "text.underline",
+      "line": 3420
+    },
+    {
+      "id": "text.uppercase",
+      "line": 3421
+    },
+    {
+      "id": "text.alignLeft",
+      "line": 3422
+    },
+    {
+      "id": "text.alignCenter",
+      "line": 3423
+    },
+    {
+      "id": "text.alignRight",
+      "line": 3424
+    },
+    {
+      "id": "text.alignJustify",
+      "line": 3425
+    },
+    {
+      "id": "text.valignTop",
+      "line": 3426
+    },
+    {
+      "id": "text.valignMiddle",
+      "line": 3427
+    },
+    {
+      "id": "text.valignBottom",
+      "line": 3428
+    },
+    {
+      "id": "text.edit",
+      "line": 3429
+    },
+    {
+      "id": "text.effects",
+      "line": 3431
+    },
+    {
+      "id": "shape.union",
+      "line": 3433
+    },
+    {
+      "id": "shape.subtract",
+      "line": 3434
+    },
+    {
+      "id": "shape.intersect",
+      "line": 3435
+    },
+    {
+      "id": "shape.exclude",
+      "line": 3436
+    },
+    {
+      "id": "chart.palette",
+      "line": 3438
+    },
+    {
+      "id": "chart.gen",
+      "line": 3439
+    },
+    {
+      "id": "table.addRow",
+      "line": 3440
+    },
+    {
+      "id": "doc.resize",
+      "line": 3443
+    },
+    {
+      "id": "view.grid",
+      "line": 3444
+    },
+    {
+      "id": "view.snap",
+      "line": 3445
+    },
+    {
+      "id": "view.rulers",
+      "line": 3446
+    },
+    {
+      "id": "view.panels",
+      "line": 3448
+    },
+    {
+      "id": "view.timeline",
+      "line": 3449
+    },
+    {
+      "id": "view.present",
+      "line": 3450
+    },
+    {
+      "id": "tool.select",
+      "line": 3451
+    },
+    {
+      "id": "tool.text",
+      "line": 3452
+    },
+    {
+      "id": "tool.brush",
+      "line": 3453
+    },
+    {
+      "id": "tool.eyedropper",
+      "line": 3454
+    },
+    {
+      "id": "ink.clear",
+      "line": 3455
+    },
+    {
+      "id": "ink.visible",
+      "line": 3456
+    },
+    {
+      "id": "slide.guides.clear",
+      "line": 3457
+    },
+    {
+      "id": "text",
+      "line": 4175
+    },
+    {
+      "id": "heading",
+      "line": 4176
+    },
+    {
+      "id": "subheading",
+      "line": 4177
+    },
+    {
+      "id": "bullets",
+      "line": 4178
+    },
+    {
+      "id": "quote",
+      "line": 4179
+    },
+    {
+      "id": "wordart",
+      "line": 4180
+    },
+    {
+      "id": "datetime",
+      "line": 4181
+    },
+    {
+      "id": "slideNumber",
+      "line": 4182
+    },
+    {
+      "id": "insert.text",
+      "line": 4287
+    },
+    {
+      "id": "insert.heading",
+      "line": 4288
+    },
+    {
+      "id": "insert.subheading",
+      "line": 4289
+    },
+    {
+      "id": "insert.bullets",
+      "line": 4290
+    },
+    {
+      "id": "insert.quote",
+      "line": 4291
+    },
+    {
+      "id": "insert.wordart",
+      "line": 4292
+    },
+    {
+      "id": "insert.datetime",
+      "line": 4293
+    },
+    {
+      "id": "insert.slideNumber",
+      "line": 4294
+    },
+    {
+      "id": "insert.video",
+      "line": 4296
+    },
+    {
+      "id": "insert.audio",
+      "line": 4297
+    },
+    {
+      "id": "insert.sticker",
+      "line": 4298
+    },
+    {
+      "id": "insert.icons",
+      "line": 4299
+    },
+    {
+      "id": "insert.chart",
+      "line": 4300
+    },
+    {
+      "id": "insert.table",
+      "line": 4301
+    },
+    {
+      "id": "slide.add",
+      "line": 4303
+    },
+    {
+      "id": "slide.addAfter",
+      "line": 4304
+    },
+    {
+      "id": "slide.duplicate",
+      "line": 4305
+    },
+    {
+      "id": "slide.moveLeft",
+      "line": 4307
+    },
+    {
+      "id": "slide.applyBgAll",
+      "line": 4312
+    },
+    {
+      "id": "slide.hide",
+      "line": 4313
+    },
+    {
+      "id": "slide.notes.show",
+      "line": 4314
+    },
+    {
+      "id": "panel.assets",
+      "line": 4315
+    },
+    {
+      "id": "panel.templates",
+      "line": 4316
+    },
+    {
+      "id": "chart.edit",
+      "line": 4317
+    },
+    {
+      "id": "table.edit",
+      "line": 4318
+    },
+    {
+      "id": "sticker.edit",
+      "line": 4319
+    },
+    {
+      "id": "comment.new",
+      "line": 4320
+    },
+    {
+      "id": "comment.toggle",
+      "line": 4322
+    },
+    {
+      "id": "onClose",
+      "line": 4444
+    },
+    {
+      "id": "vivid",
+      "line": 4461
+    },
+    {
+      "id": "warm",
+      "line": 4462
+    },
+    {
+      "id": "cool",
+      "line": 4463
+    },
+    {
+      "id": "vintage",
+      "line": 4464
+    },
+    {
+      "id": "bw",
+      "line": 4465
+    },
+    {
+      "id": "dream",
+      "line": 4466
+    },
+    {
+      "id": "image.quick.brightness",
+      "line": 4581
+    },
+    {
+      "id": "image.quick.contrast",
+      "line": 4582
+    },
+    {
+      "id": "image.quick.saturation",
+      "line": 4583
+    },
+    {
+      "id": "image.quick.blur",
+      "line": 4584
+    },
+    {
+      "id": "image.filter.vivid",
+      "line": 4585
+    },
+    {
+      "id": "image.filter.cool",
+      "line": 4586
+    },
+    {
+      "id": "image.filter.bw",
+      "line": 4587
+    },
+    {
+      "id": "image.filter.reset",
+      "line": 4588
+    },
+    {
+      "id": "image.mask.circle",
+      "line": 4589
+    },
+    {
+      "id": "image.mask.star",
+      "line": 4590
+    },
+    {
+      "id": "image.mask.none",
+      "line": 4591
+    },
+    {
+      "id": "image.flipX",
+      "line": 4592
+    },
+    {
+      "id": "image.addToAssets",
+      "line": 4594
+    },
+    {
+      "id": "export.jpeg",
+      "line": 4867
+    },
+    {
+      "id": "export.webp",
+      "line": 4868
+    },
+    {
+      "id": "ai.art",
+      "line": 5364
+    },
+    {
+      "id": "ai.image.enhance",
+      "line": 5372
+    },
+    {
+      "id": "brand.logo",
+      "line": 5375
+    },
+    {
+      "id": "brand.apply",
+      "line": 5383
+    },
+    {
+      "id": "view.present",
+      "line": 5606
+    },
+    {
+      "id": "els",
+      "line": 5660
+    },
+    {
+      "id": "review.find",
+      "line": 6072
+    },
+    {
+      "id": "version.save",
+      "line": 6074
+    },
+    {
+      "id": "version.restore",
+      "line": 6075
+    },
+    {
+      "id": "share.open",
+      "line": 6078
+    },
+    {
+      "id": "comment.resolveAll",
+      "line": 6079
+    },
+    {
+      "id": "shape.fill.none",
+      "line": 6082
+    },
+    {
+      "id": "shape.outline",
+      "line": 6084
+    },
+    {
+      "id": "path.edit",
+      "line": 6085
+    },
+    {
+      "id": "ink.symmetry",
+      "line": 6088
+    },
+    {
+      "id": "view.zoomIn",
+      "line": 6089
+    },
+    {
+      "id": "view.fullscreen",
+      "line": 6090
+    },
+    {
+      "id": "view.focus",
+      "line": 6091
+    },
+    {
+      "id": "view.theme",
+      "line": 6092
+    },
+    {
+      "id": "workspace.graphic",
+      "line": 6093
+    },
+    {
+      "id": "workspace.present",
+      "line": 6094
+    },
+    {
+      "id": "workspace.vector",
+      "line": 6095
+    }
+  ],
+  "ribbonCmds": [
+    {
+      "id": "file.new",
+      "line": 3489
+    },
+    {
+      "id": "file.open",
+      "line": 3490
+    },
+    {
+      "id": "file.save",
+      "line": 3491
+    },
+    {
+      "id": "file.saveAs",
+      "line": 3492
+    },
+    {
+      "id": "file.recover",
+      "line": 3493
+    },
+    {
+      "id": "file.import.pptx",
+      "line": 3496
+    },
+    {
+      "id": "insert.image",
+      "line": 3496
+    },
+    {
+      "id": "file.import.json",
+      "line": 3497
+    },
+    {
+      "id": "file.import.html",
+      "line": 3497
+    },
+    {
+      "id": "export.pdf",
+      "line": 3500
+    },
+    {
+      "id": "export.png",
+      "line": 3500
+    },
+    {
+      "id": "export.pptx",
+      "line": 3501
+    },
+    {
+      "id": "export.html",
+      "line": 3502
+    },
+    {
+      "id": "export.webm",
+      "line": 3502
+    },
+    {
+      "id": "export.jpg",
+      "line": 3503
+    },
+    {
+      "id": "export.webp",
+      "line": 3503
+    },
+    {
+      "id": "export.svg",
+      "line": 3503
+    },
+    {
+      "id": "share.open",
+      "line": 3506
+    },
+    {
+      "id": "export.zip",
+      "line": 3506
+    },
+    {
+      "id": "export.print",
+      "line": 3507
+    },
+    {
+      "id": "share.invite",
+      "line": 3507
+    },
+    {
+      "id": "file.preferences",
+      "line": 3510
+    },
+    {
+      "id": "help.shortcuts",
+      "line": 3510
+    },
+    {
+      "id": "help.about",
+      "line": 3511
+    },
+    {
+      "id": "help.commands",
+      "line": 3511
+    },
+    {
+      "id": "edit.undo",
+      "line": 3516
+    },
+    {
+      "id": "edit.redo",
+      "line": 3517
+    },
+    {
+      "id": "edit.paste",
+      "line": 3518
+    },
+    {
+      "id": "edit.cut",
+      "line": 3518
+    },
+    {
+      "id": "edit.copy",
+      "line": 3519
+    },
+    {
+      "id": "edit.duplicate",
+      "line": 3519
+    },
+    {
+      "id": "edit.delete",
+      "line": 3520
+    },
+    {
+      "id": "slide.add",
+      "line": 3523
+    },
+    {
+      "id": "slide.duplicate",
+      "line": 3523
+    },
+    {
+      "id": "slide.layout",
+      "line": 3524
+    },
+    {
+      "id": "slide.background",
+      "line": 3524
+    },
+    {
+      "id": "slide.theme",
+      "line": 3525
+    },
+    {
+      "id": "slide.delete",
+      "line": 3525
+    },
+    {
+      "id": "insert.text",
+      "line": 3528
+    },
+    {
+      "id": "insert.heading",
+      "line": 3528
+    },
+    {
+      "id": "insert.subheading",
+      "line": 3529
+    },
+    {
+      "id": "insert.bullets",
+      "line": 3529
+    },
+    {
+      "id": "insert.quote",
+      "line": 3530
+    },
+    {
+      "id": "insert.wordart",
+      "line": 3530
+    },
+    {
+      "id": "insert.sticker",
+      "line": 3531
+    },
+    {
+      "id": "arrange.front",
+      "line": 3539
+    },
+    {
+      "id": "arrange.forward",
+      "line": 3539
+    },
+    {
+      "id": "arrange.backward",
+      "line": 3540
+    },
+    {
+      "id": "arrange.back",
+      "line": 3540
+    },
+    {
+      "id": "arrange.group",
+      "line": 3541
+    },
+    {
+      "id": "arrange.ungroup",
+      "line": 3541
+    },
+    {
+      "id": "align.left",
+      "line": 3542
+    },
+    {
+      "id": "view.present",
+      "line": 3545
+    },
+    {
+      "id": "view.presenter",
+      "line": 3546
+    },
+    {
+      "id": "slide.notes",
+      "line": 3547
+    },
+    {
+      "id": "slide.transition",
+      "line": 3548
+    },
+    {
+      "id": "anim.open",
+      "line": 3549
+    },
+    {
+      "id": "comment.new",
+      "line": 3553
+    },
+    {
+      "id": "insert.image",
+      "line": 3558
+    },
+    {
+      "id": "insert.video",
+      "line": 3558
+    },
+    {
+      "id": "insert.audio",
+      "line": 3559
+    },
+    {
+      "id": "panel.assets",
+      "line": 3559
+    },
+    {
+      "id": "image.background",
+      "line": 3560
+    },
+    {
+      "id": "ai.art",
+      "line": 3563
+    },
+    {
+      "id": "ai.pattern",
+      "line": 3563
+    },
+    {
+      "id": "ai.deck",
+      "line": 3564
+    },
+    {
+      "id": "ai.palette",
+      "line": 3564
+    },
+    {
+      "id": "insert.chart",
+      "line": 3567
+    },
+    {
+      "id": "insert.table",
+      "line": 3567
+    },
+    {
+      "id": "insert.diagram",
+      "line": 3568
+    },
+    {
+      "id": "insert.mindmap",
+      "line": 3568
+    },
+    {
+      "id": "insert.text",
+      "line": 3572
+    },
+    {
+      "id": "insert.heading",
+      "line": 3572
+    },
+    {
+      "id": "insert.quote",
+      "line": 3573
+    },
+    {
+      "id": "insert.wordart",
+      "line": 3573
+    },
+    {
+      "id": "insert.sticker",
+      "line": 3574
+    },
+    {
+      "id": "insert.icons",
+      "line": 3574
+    },
+    {
+      "id": "comment.new",
+      "line": 3577
+    },
+    {
+      "id": "insert.datetime",
+      "line": 3577
+    },
+    {
+      "id": "insert.slideNumber",
+      "line": 3578
+    },
+    {
+      "id": "slide.guides",
+      "line": 3578
+    },
+    {
+      "id": "ink.clear",
+      "line": 3595
+    },
+    {
+      "id": "ink.visible",
+      "line": 3595
+    },
+    {
+      "id": "ink.symmetry",
+      "line": 3596
+    },
+    {
+      "id": "path.smooth",
+      "line": 3596
+    },
+    {
+      "id": "insert.image",
+      "line": 3602
+    },
+    {
+      "id": "image.replace",
+      "line": 3602
+    },
+    {
+      "id": "image.crop",
+      "line": 3603
+    },
+    {
+      "id": "image.removeBg",
+      "line": 3603
+    },
+    {
+      "id": "image.adjust",
+      "line": 3604
+    },
+    {
+      "id": "image.expand",
+      "line": 3604
+    },
+    {
+      "id": "image.upscale",
+      "line": 3605
+    },
+    {
+      "id": "image.collage",
+      "line": 3605
+    },
+    {
+      "id": "image.quick.brightness",
+      "line": 3608
+    },
+    {
+      "id": "image.quick.contrast",
+      "line": 3608
+    },
+    {
+      "id": "image.quick.saturation",
+      "line": 3609
+    },
+    {
+      "id": "image.quick.blur",
+      "line": 3609
+    },
+    {
+      "id": "image.filter.bw",
+      "line": 3610
+    },
+    {
+      "id": "image.filter.reset",
+      "line": 3610
+    },
+    {
+      "id": "image.filter.vivid",
+      "line": 3613
+    },
+    {
+      "id": "image.filter.warm",
+      "line": 3613
+    },
+    {
+      "id": "image.filter.cool",
+      "line": 3614
+    },
+    {
+      "id": "image.filter.vintage",
+      "line": 3614
+    },
+    {
+      "id": "image.filter.bw",
+      "line": 3615
+    },
+    {
+      "id": "image.filter.dream",
+      "line": 3615
+    },
+    {
+      "id": "image.mask.circle",
+      "line": 3618
+    },
+    {
+      "id": "image.mask.diamond",
+      "line": 3618
+    },
+    {
+      "id": "image.mask.star",
+      "line": 3619
+    },
+    {
+      "id": "image.mask.heart",
+      "line": 3619
+    },
+    {
+      "id": "image.mask.none",
+      "line": 3620
+    },
+    {
+      "id": "image.flipX",
+      "line": 3623
+    },
+    {
+      "id": "image.flipY",
+      "line": 3623
+    },
+    {
+      "id": "image.background",
+      "line": 3624
+    },
+    {
+      "id": "edit.delete",
+      "line": 3624
+    },
+    {
+      "id": "shape.union",
+      "line": 3633
+    },
+    {
+      "id": "shape.subtract",
+      "line": 3633
+    },
+    {
+      "id": "shape.intersect",
+      "line": 3634
+    },
+    {
+      "id": "shape.exclude",
+      "line": 3634
+    },
+    {
+      "id": "shape.toPath",
+      "line": 3635
+    },
+    {
+      "id": "shape.outline",
+      "line": 3635
+    },
+    {
+      "id": "path.addNode",
+      "line": 3638
+    },
+    {
+      "id": "path.simplify",
+      "line": 3638
+    },
+    {
+      "id": "path.close",
+      "line": 3639
+    },
+    {
+      "id": "path.open",
+      "line": 3639
+    },
+    {
+      "id": "path.reverse",
+      "line": 3640
+    },
+    {
+      "id": "path.edit",
+      "line": 3640
+    },
+    {
+      "id": "shape.fill.none",
+      "line": 3644
+    },
+    {
+      "id": "shape.fill.gradient",
+      "line": 3644
+    },
+    {
+      "id": "shape.fill.pattern",
+      "line": 3645
+    },
+    {
+      "id": "align.left",
+      "line": 3648
+    },
+    {
+      "id": "align.centerH",
+      "line": 3648
+    },
+    {
+      "id": "align.right",
+      "line": 3648
+    },
+    {
+      "id": "align.top",
+      "line": 3649
+    },
+    {
+      "id": "align.centerV",
+      "line": 3649
+    },
+    {
+      "id": "align.bottom",
+      "line": 3649
+    },
+    {
+      "id": "view.present",
+      "line": 3654
+    },
+    {
+      "id": "present.current",
+      "line": 3654
+    },
+    {
+      "id": "view.presenter",
+      "line": 3655
+    },
+    {
+      "id": "slide.transition",
+      "line": 3658
+    },
+    {
+      "id": "anim.open",
+      "line": 3658
+    },
+    {
+      "id": "slide.notes",
+      "line": 3659
+    },
+    {
+      "id": "slide.audio",
+      "line": 3659
+    },
+    {
+      "id": "slide.duration",
+      "line": 3660
+    },
+    {
+      "id": "view.timeline",
+      "line": 3663
+    },
+    {
+      "id": "timeline.play",
+      "line": 3663
+    },
+    {
+      "id": "timeline.stop",
+      "line": 3664
+    },
+    {
+      "id": "export.webm",
+      "line": 3667
+    },
+    {
+      "id": "video.record",
+      "line": 3667
+    },
+    {
+      "id": "slide.add",
+      "line": 3670
+    },
+    {
+      "id": "slide.duplicate",
+      "line": 3670
+    },
+    {
+      "id": "panel.templates",
+      "line": 3671
+    },
+    {
+      "id": "slide.theme",
+      "line": 3671
+    },
+    {
+      "id": "insert.video",
+      "line": 3676
+    },
+    {
+      "id": "insert.audio",
+      "line": 3676
+    },
+    {
+      "id": "media.preview",
+      "line": 3677
+    },
+    {
+      "id": "edit.delete",
+      "line": 3677
+    },
+    {
+      "id": "view.timeline",
+      "line": 3680
+    },
+    {
+      "id": "timeline.play",
+      "line": 3680
+    },
+    {
+      "id": "timeline.stop",
+      "line": 3681
+    },
+    {
+      "id": "timeline.reset",
+      "line": 3681
+    },
+    {
+      "id": "slide.transition",
+      "line": 3684
+    },
+    {
+      "id": "anim.open",
+      "line": 3684
+    },
+    {
+      "id": "slide.duration",
+      "line": 3685
+    },
+    {
+      "id": "video.record",
+      "line": 3688
+    },
+    {
+      "id": "export.webm",
+      "line": 3688
+    },
+    {
+      "id": "slide.audio",
+      "line": 3691
+    },
+    {
+      "id": "media.volume",
+      "line": 3691
+    },
+    {
+      "id": "slide.audio.remove",
+      "line": 3692
+    },
+    {
+      "id": "comment.new",
+      "line": 3697
+    },
+    {
+      "id": "comment.toggle",
+      "line": 3697
+    },
+    {
+      "id": "comment.list",
+      "line": 3698
+    },
+    {
+      "id": "comment.resolveAll",
+      "line": 3698
+    },
+    {
+      "id": "version.save",
+      "line": 3701
+    },
+    {
+      "id": "version.list",
+      "line": 3701
+    },
+    {
+      "id": "version.activity",
+      "line": 3702
+    },
+    {
+      "id": "review.find",
+      "line": 3705
+    },
+    {
+      "id": "review.spellcheck",
+      "line": 3705
+    },
+    {
+      "id": "ai.improve",
+      "line": 3706
+    },
+    {
+      "id": "review.stats",
+      "line": 3706
+    },
+    {
+      "id": "review.accessibility",
+      "line": 3709
+    },
+    {
+      "id": "review.contrast",
+      "line": 3709
+    },
+    {
+      "id": "help.shortcuts",
+      "line": 3710
+    },
+    {
+      "id": "version.compare",
+      "line": 3713
+    },
+    {
+      "id": "version.restore",
+      "line": 3713
+    },
+    {
+      "id": "export.review",
+      "line": 3714
+    },
+    {
+      "id": "view.zoomFit",
+      "line": 3719
+    },
+    {
+      "id": "view.zoom100",
+      "line": 3719
+    },
+    {
+      "id": "view.zoomSelection",
+      "line": 3720
+    },
+    {
+      "id": "view.zoomIn",
+      "line": 3720
+    },
+    {
+      "id": "view.zoomOut",
+      "line": 3721
+    },
+    {
+      "id": "view.grid",
+      "line": 3724
+    },
+    {
+      "id": "view.snap",
+      "line": 3724
+    },
+    {
+      "id": "view.rulers",
+      "line": 3725
+    },
+    {
+      "id": "slide.guides",
+      "line": 3725
+    },
+    {
+      "id": "view.panels",
+      "line": 3726
+    },
+    {
+      "id": "view.timeline",
+      "line": 3729
+    },
+    {
+      "id": "view.fullscreen",
+      "line": 3729
+    },
+    {
+      "id": "view.focus",
+      "line": 3730
+    },
+    {
+      "id": "view.theme",
+      "line": 3730
+    },
+    {
+      "id": "workspace.present",
+      "line": 3733
+    },
+    {
+      "id": "workspace.graphic",
+      "line": 3733
+    },
+    {
+      "id": "workspace.photo",
+      "line": 3734
+    },
+    {
+      "id": "workspace.vector",
+      "line": 3734
+    },
+    {
+      "id": "workspace.video",
+      "line": 3735
+    },
+    {
+      "id": "workspace.review",
+      "line": 3735
+    },
+    {
+      "id": "view.present",
+      "line": 3738
+    },
+    {
+      "id": "view.presenter",
+      "line": 3738
+    },
+    {
+      "id": "help.shortcuts",
+      "line": 3739
+    }
+  ],
+  "ribbonTools": [
+    {
+      "id": "line",
+      "line": 3536
+    },
+    {
+      "id": "select",
+      "line": 3552
+    },
+    {
+      "id": "hand",
+      "line": 3552
+    },
+    {
+      "id": "zoom",
+      "line": 3552
+    },
+    {
+      "id": "select",
+      "line": 3583
+    },
+    {
+      "id": "node",
+      "line": 3583
+    },
+    {
+      "id": "pen",
+      "line": 3583
+    },
+    {
+      "id": "brush",
+      "line": 3584
+    },
+    {
+      "id": "highlighter",
+      "line": 3584
+    },
+    {
+      "id": "eraser",
+      "line": 3585
+    },
+    {
+      "id": "eyedropper",
+      "line": 3585
+    },
+    {
+      "id": "wand",
+      "line": 3586
+    },
+    {
+      "id": "crop",
+      "line": 3586
+    },
+    {
+      "id": "pen",
+      "line": 3629
+    },
+    {
+      "id": "node",
+      "line": 3629
+    }
+  ],
+  "dataCommands": [
+    {
+      "id": "insert.text",
+      "line": 2591
+    },
+    {
+      "id": "insert.image",
+      "line": 2591
+    },
+    {
+      "id": "ai.art",
+      "line": 2591
+    },
+    {
+      "id": "arrange.front",
+      "line": 2602
+    },
+    {
+      "id": "arrange.forward",
+      "line": 2602
+    },
+    {
+      "id": "arrange.backward",
+      "line": 2602
+    },
+    {
+      "id": "arrange.back",
+      "line": 2602
+    },
+    {
+      "id": "arrange.group",
+      "line": 2603
+    },
+    {
+      "id": "arrange.ungroup",
+      "line": 2603
+    },
+    {
+      "id": "edit.duplicate",
+      "line": 2603
+    },
+    {
+      "id": "edit.delete",
+      "line": 2603
+    },
+    {
+      "id": "align.left",
+      "line": 2614
+    },
+    {
+      "id": "align.centerH",
+      "line": 2614
+    },
+    {
+      "id": "align.right",
+      "line": 2614
+    },
+    {
+      "id": "align.top",
+      "line": 2614
+    },
+    {
+      "id": "align.centerV",
+      "line": 2614
+    },
+    {
+      "id": "align.bottom",
+      "line": 2614
+    },
+    {
+      "id": "align.distributeH",
+      "line": 2614
+    },
+    {
+      "id": "align.distributeV",
+      "line": 2614
+    },
+    {
+      "id": "edit.lock",
+      "line": 2615
+    },
+    {
+      "id": "edit.hide",
+      "line": 2615
+    },
+    {
+      "id": "edit.copy",
+      "line": 2615
+    },
+    {
+      "id": "style.copy",
+      "line": 2615
+    },
+    {
+      "id": "style.paste",
+      "line": 2615
+    },
+    {
+      "id": "text.bold",
+      "line": 2634
+    },
+    {
+      "id": "text.italic",
+      "line": 2634
+    },
+    {
+      "id": "text.underline",
+      "line": 2634
+    },
+    {
+      "id": "text.uppercase",
+      "line": 2634
+    },
+    {
+      "id": "text.alignLeft",
+      "line": 2635
+    },
+    {
+      "id": "text.alignCenter",
+      "line": 2635
+    },
+    {
+      "id": "text.alignRight",
+      "line": 2635
+    },
+    {
+      "id": "text.alignJustify",
+      "line": 2635
+    },
+    {
+      "id": "text.valignTop",
+      "line": 2636
+    },
+    {
+      "id": "text.valignMiddle",
+      "line": 2636
+    },
+    {
+      "id": "text.valignBottom",
+      "line": 2636
+    },
+    {
+      "id": "text.edit",
+      "line": 2644
+    },
+    {
+      "id": "text.fit",
+      "line": 2644
+    },
+    {
+      "id": "text.improve",
+      "line": 2644
+    },
+    {
+      "id": "text.effects",
+      "line": 2644
+    },
+    {
+      "id": "shape.duplicate",
+      "line": 2657
+    },
+    {
+      "id": "shape.toPath",
+      "line": 2657
+    },
+    {
+      "id": "shape.union",
+      "line": 2657
+    },
+    {
+      "id": "shape.subtract",
+      "line": 2657
+    },
+    {
+      "id": "shape.intersect",
+      "line": 2657
+    },
+    {
+      "id": "shape.exclude",
+      "line": 2657
+    },
+    {
+      "id": "path.edit",
+      "line": 2668
+    },
+    {
+      "id": "path.addNode",
+      "line": 2668
+    },
+    {
+      "id": "path.simplify",
+      "line": 2668
+    },
+    {
+      "id": "path.close",
+      "line": 2668
+    },
+    {
+      "id": "path.open",
+      "line": 2668
+    },
+    {
+      "id": "shape.toPath",
+      "line": 2677
+    },
+    {
+      "id": "edit.duplicate",
+      "line": 2677
+    },
+    {
+      "id": "image.replace",
+      "line": 2681
+    },
+    {
+      "id": "image.crop",
+      "line": 2681
+    },
+    {
+      "id": "image.removeBg",
+      "line": 2681
+    },
+    {
+      "id": "image.adjust",
+      "line": 2682
+    },
+    {
+      "id": "image.expand",
+      "line": 2682
+    },
+    {
+      "id": "image.upscale",
+      "line": 2682
+    },
+    {
+      "id": "image.remove",
+      "line": 2682
+    },
+    {
+      "id": "image.collage",
+      "line": 2688
+    },
+    {
+      "id": "image.background",
+      "line": 2688
+    },
+    {
+      "id": "chart.edit",
+      "line": 2694
+    },
+    {
+      "id": "chart.palette",
+      "line": 2694
+    },
+    {
+      "id": "chart.gen",
+      "line": 2694
+    },
+    {
+      "id": "table.edit",
+      "line": 2702
+    },
+    {
+      "id": "table.csv",
+      "line": 2702
+    },
+    {
+      "id": "table.addRow",
+      "line": 2702
+    },
+    {
+      "id": "sticker.set",
+      "line": 2708
+    },
+    {
+      "id": "media.preview",
+      "line": 2717
+    },
+    {
+      "id": "media.replace",
+      "line": 2717
+    },
+    {
+      "id": "media.remove",
+      "line": 2717
+    },
+    {
+      "id": "image.filter.vivid",
+      "line": 2751
+    },
+    {
+      "id": "image.filter.warm",
+      "line": 2751
+    },
+    {
+      "id": "image.filter.cool",
+      "line": 2751
+    },
+    {
+      "id": "image.filter.bw",
+      "line": 2751
+    },
+    {
+      "id": "image.filter.reset",
+      "line": 2751
+    },
+    {
+      "id": "slide.background",
+      "line": 2771
+    },
+    {
+      "id": "slide.applyBgAll",
+      "line": 2771
+    },
+    {
+      "id": "slide.theme",
+      "line": 2771
+    },
+    {
+      "id": "slide.audio",
+      "line": 2779
+    },
+    {
+      "id": "slide.notes",
+      "line": 2779
+    },
+    {
+      "id": "slide.duplicate",
+      "line": 2779
+    },
+    {
+      "id": "slide.delete",
+      "line": 2779
+    },
+    {
+      "id": "doc.preset",
+      "line": 2782
+    },
+    {
+      "id": "doc.preset",
+      "line": 2782
+    },
+    {
+      "id": "doc.preset",
+      "line": 2782
+    },
+    {
+      "id": "doc.preset",
+      "line": 2782
+    },
+    {
+      "id": "doc.preset",
+      "line": 2782
+    },
+    {
+      "id": "doc.resize",
+      "line": 2785
+    },
+    {
+      "id": "project.info",
+      "line": 2785
+    },
+    {
+      "id": "ai.title",
+      "line": 2792
+    },
+    {
+      "id": "ai.improve",
+      "line": 2792
+    },
+    {
+      "id": "ai.palette",
+      "line": 2793
+    },
+    {
+      "id": "ai.layout",
+      "line": 2793
+    },
+    {
+      "id": "ai.deck",
+      "line": 2793
+    },
+    {
+      "id": "ai.art",
+      "line": 2794
+    },
+    {
+      "id": "ai.pattern",
+      "line": 2794
+    },
+    {
+      "id": "ai.image.enhance",
+      "line": 2795
+    },
+    {
+      "id": "ai.image.removeBg",
+      "line": 2795
+    },
+    {
+      "id": "ai.deck",
+      "line": 2797
+    },
+    {
+      "id": "${escAttr(cmd)}",
+      "line": 3472
+    },
+    {
+      "id": "color.apply",
+      "line": 3643
+    },
+    {
+      "id": "color.apply",
+      "line": 6222
+    }
+  ],
+  "exportCmds": [
+    {
+      "id": "${c}",
+      "line": 5976
+    },
+    {
+      "id": "file.save",
+      "line": 5976
+    },
+    {
+      "id": "export.review",
+      "line": 5976
+    }
+  ],
+  "runCommands": [
+    {
+      "id": "export.quick",
+      "line": 2999
+    },
+    {
+      "id": "file.save",
+      "line": 3000
+    },
+    {
+      "id": "view.panels",
+      "line": 6166
+    },
+    {
+      "id": "view.grid",
+      "line": 6208
+    },
+    {
+      "id": "view.snap",
+      "line": 6209
+    },
+    {
+      "id": "view.rulers",
+      "line": 6210
+    }
+  ]
+}

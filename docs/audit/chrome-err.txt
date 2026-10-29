@@ -1,0 +1,4 @@
+[1022/122839.977:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:430] OpenProcess: Accesso negato. (0x5)
+[22296:6492:1022/122840.583:FATAL:mojo\public\cpp\platform\platform_channel.cc:112] Check failed: . : Accesso negato. (0x5)
+[22296:18612:1022/122840.588:ERROR:chrome\installer\util\google_update_settings_win.cc:270] Failed opening key Software\Google\Update\ClientStateMedium\{8A69D345-D564-463c-AFF1-A69D9E530F96} to set usagestats; result: 5
+[1022/122840.591:ERROR:third_party\crashpad\crashpad\client\crashpad_client_win.cc:144] crash server failed to launch, self-terminating

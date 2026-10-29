@@ -1,0 +1,92 @@
+{
+  "layout": {
+    "innerW": 390,
+    "innerH": 844,
+    "scrollW": 390,
+    "scrollH": 844,
+    "panelsCollapsed": true,
+    "overflowing": [],
+    "backdrop": true
+  },
+  "tap": {
+    "small": [],
+    "total": 0
+  },
+  "flow": {
+    "n0": 6,
+    "n1": 7,
+    "inserted": true,
+    "layerButtons": true,
+    "upSize": "17x17",
+    "propsVisible": true,
+    "backdropOpen": true,
+    "rightW": 1,
+    "closedByBackdrop": true,
+    "modalW": 390,
+    "innerW": 390,
+    "presenting": true,
+    "ended": true
+  },
+  "checks": [
+    {
+      "n": "nessuno scorrimento orizzontale",
+      "ok": true,
+      "d": "{\"innerW\":390,\"innerH\":844,\"scrollW\":390,\"scrollH\":844,\"panelsCollapsed\":true,\"overflowing\":[],\"backdrop\":true}"
+    },
+    {
+      "n": "nessun elemento fuori dal bordo",
+      "ok": true,
+      "d": "[]"
+    },
+    {
+      "n": "pannelli chiusi all’avvio su mobile",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "esiste lo sfondo per chiudere i pannelli",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "ribbon popolato su tutte le schede",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "bersagli tattili ≥ 30px",
+      "ok": true,
+      "d": "[]"
+    },
+    {
+      "n": "tap sul ribbon inserisce testo",
+      "ok": true,
+      "d": "{\"n0\":6,\"n1\":7,\"inserted\":true,\"layerButtons\":true,\"upSize\":\"17x17\",\"propsVisible\":true,\"backdropOpen\":true,\"rightW\":1,\"closedByBackdrop\":true,\"modalW\":390,\"innerW\":390,\"presenting\":true,\"ended\":true}"
+    },
+    {
+      "n": "pulsanti livello presenti su touch",
+      "ok": true,
+      "d": "17x17"
+    },
+    {
+      "n": "pannello proprietà apribile come drawer",
+      "ok": true,
+      "d": "{\"p\":true,\"b\":true,\"w\":1}"
+    },
+    {
+      "n": "drawer si chiude toccando lo sfondo",
+      "ok": true,
+      "d": ""
+    },
+    {
+      "n": "modale entro la larghezza",
+      "ok": true,
+      "d": "390px"
+    },
+    {
+      "n": "presentazione avviabile e chiudibile",
+      "ok": true,
+      "d": "{\"p\":true,\"e\":true}"
+    }
+  ]
+}
