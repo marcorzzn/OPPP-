@@ -3,26 +3,30 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Poster Vintage</title>
+    <link rel="icon" type="image/png" href="../icons/favicon-32.png" />
+    <title>Poster Vintage — OverPowerPoint Studio</title>
     <style>
       :root {
-        --bg: #f4efe4;
-        --fg: #2a2620;
-        --card: #fffaf0;
-        --line: #d8cfba;
-        --acc: #b5482a;
+        --bg: #121316;
+        --fg: #f3f4f6;
+        --muted: #9ca3af;
+        --card: #181a1f;
+        --line: #2a2e37;
+        --acc: #ff5500;
+        --acc-hover: #e04800;
         box-sizing: border-box;
         padding-top: env(safe-area-inset-top, 0px);
         padding-bottom: env(safe-area-inset-bottom, 0px);
       }
-      @media (prefers-color-scheme: dark) {
-        :root:not([data-theme="light"]) {
-          --bg: #1d1a16;
-          --fg: #efe7d6;
-          --card: #272320;
-          --line: #3b352d;
-          --acc: #e0714f;
-        }
+      :root[data-theme="light"],
+      body[data-theme="light"] {
+        --bg: #f4f5f7;
+        --fg: #111317;
+        --muted: #5b6370;
+        --card: #ffffff;
+        --line: #d5d9e2;
+        --acc: #ff5500;
+        --acc-hover: #e04800;
       }
       * {
         box-sizing: border-box;
@@ -31,7 +35,7 @@
         margin: 0;
         background: var(--bg);
         color: var(--fg);
-        font-family: Georgia, "Times New Roman", serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         line-height: 1.45;
       }
       main {
@@ -40,39 +44,42 @@
         padding: 20px 16px 40px;
       }
       h1 {
-        font-size: 1.6rem;
+        font-size: 1.45rem;
+        font-weight: 800;
         margin: 0.2em 0 0.1em;
-        letter-spacing: 0.02em;
+        letter-spacing: -0.01em;
       }
       p.sub {
         margin: 0 0 16px;
-        opacity: 0.75;
-        font-size: 0.95rem;
+        color: var(--muted);
+        font-size: 0.92rem;
       }
       .panel {
         background: var(--card);
         border: 1px solid var(--line);
-        border-radius: 10px;
+        border-radius: 6px;
         padding: 14px;
         margin-bottom: 18px;
       }
       input[type="file"] {
         width: 100%;
         padding: 10px;
-        border: 2px dashed var(--line);
-        border-radius: 8px;
+        border: 1px dashed var(--line);
+        border-radius: 4px;
         background: transparent;
         color: var(--fg);
+        cursor: pointer;
       }
       .row {
         display: flex;
         align-items: center;
         gap: 10px;
         margin-top: 10px;
-        font-size: 0.92rem;
+        font-size: 0.88rem;
       }
       .row label {
         flex: 0 0 150px;
+        font-weight: 600;
       }
       .row input[type="range"] {
         flex: 1;
@@ -82,31 +89,43 @@
         width: 34px;
         text-align: right;
         font-variant-numeric: tabular-nums;
+        color: var(--muted);
       }
       .card {
         margin-bottom: 26px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 12px;
       }
       .card .tag {
-        font-size: 0.85rem;
-        opacity: 0.7;
-        margin-bottom: 6px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 8px;
       }
       canvas {
         width: 100%;
         height: auto;
         display: block;
-        border-radius: 3px;
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        border: 1px solid var(--line);
       }
       button {
         margin-top: 10px;
-        padding: 9px 16px;
-        border: 0;
-        border-radius: 8px;
+        margin-right: 8px;
+        padding: 8px 14px;
+        border: 1px solid var(--acc);
+        border-radius: 4px;
         background: var(--acc);
         color: #fff;
-        font: inherit;
+        font: 600 0.85rem inherit;
         cursor: pointer;
+      }
+      button:hover {
+        background: var(--acc-hover);
       }
       .sw {
         display: flex;
@@ -116,12 +135,12 @@
       .sw i {
         width: 22px;
         height: 22px;
-        border-radius: 50%;
-        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        border: 1px solid var(--line);
       }
       #msg {
-        opacity: 0.7;
-        font-style: italic;
+        color: var(--muted);
+        font-size: 0.85rem;
       }
       /* Modalità dentro OPP: via titolo e descrizione, restano controlli e canvas */
       body.embed h1,

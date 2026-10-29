@@ -3,29 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="icon" href="data:," />
+    <meta name="description" content="OverPowerPoint Studio — Suite creativa flat all-in-one per presentazioni, grafica vettoriale, fotoritocco e video." />
+    <meta property="og:title" content="OverPowerPoint Studio — Mega Sala Creativa" />
+    <meta property="og:description" content="Presentazioni, grafica, foto, vettori e video in un unico studio web flat e offline-first." />
+    <meta property="og:image" content="icons/icon-512.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="manifest" href="manifest.json" />
-    <meta name="theme-color" content="#ff9a2e" />
+    <meta name="theme-color" content="#ff5500" id="metaThemeColor" />
     <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="OPP" />
+    <meta name="apple-mobile-web-app-title" content="OPP Studio" />
     <title>OverPowerPoint Studio — Mega Sala Creativa</title>
     <style>
       :root {
-        --accent: #ff9a2e;
-        --accent2: #ffb14d;
-        --accent-dark: #e07d12;
+        --accent: #ff5500;
+        --accent2: #ff7733;
+        --accent-dark: #d94600;
         --accent-glow: transparent;
-        --bg: #0f141f;
-        --bg2: #161c2b;
-        --panel: #141b29;
-        --panel-2: #1a2233;
-        --panel-3: #222c42;
-        --line: #242f45;
-        --line-strong: #334363;
-        --text: #e2e8f0;
-        --dim: #8896ab;
+        --bg: #111215;
+        --bg2: #16181c;
+        --panel: #181a1f;
+        --panel-2: #1f2229;
+        --panel-3: #272b34;
+        --line: #2a2e38;
+        --line-strong: #3a404d;
+        --text: #f1f3f5;
+        --dim: #949ba6;
         --bright: #ffffff;
         --ok: #10b981;
         --danger: #ef4444;
@@ -33,28 +39,28 @@
         --violet: #8b5cf6;
         --pink: #ec4899;
         --glass-blur: none;
-        --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.45);
-        --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.32);
-        --radius: 5px;
-        --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --shadow-lg: 0 14px 32px rgba(0, 0, 0, 0.5);
+        --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.35);
+        --radius: 4px;
+        --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       }
       body.theme-light {
-        --accent: #2563eb;
-        --accent2: #3b82f6;
-        --accent-dark: #1d4ed8;
+        --accent: #ff5500;
+        --accent2: #ff6a1a;
+        --accent-dark: #d94600;
         --accent-glow: transparent;
-        --bg: #f4f6fa;
-        --bg2: #ebf0f7;
+        --bg: #eef0f4;
+        --bg2: #f7f8fa;
         --panel: #ffffff;
-        --panel-2: #f8fafc;
-        --panel-3: #eef2f7;
-        --line: #d8dee8;
-        --line-strong: #cbd5e1;
-        --text: #1e293b;
-        --dim: #64748b;
-        --bright: #0f172a;
-        --shadow-lg: 0 14px 30px rgba(0, 0, 0, 0.08);
-        --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+        --panel-2: #f3f5f8;
+        --panel-3: #e6e9ef;
+        --line: #d4d8e1;
+        --line-strong: #b8bfcc;
+        --text: #141619;
+        --dim: #5c6470;
+        --bright: #090a0c;
+        --shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.12);
+        --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
       }
       * {
         box-sizing: border-box;
@@ -72,7 +78,7 @@
         font-family: var(--font);
         font-size: 12px;
         user-select: none;
-        transition: background-color 0.2s, color 0.2s;
+        transition: background-color 0.15s, color 0.15s;
       }
       button,
       input,
@@ -87,6 +93,13 @@
         cursor: pointer;
         color: var(--text);
       }
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 1px;
+      }
       input,
       select,
       textarea {
@@ -99,20 +112,20 @@
         display: none !important;
       }
       ::-webkit-scrollbar {
-        width: 9px;
-        height: 9px;
+        width: 8px;
+        height: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: rgba(0, 0, 0, 0.18);
+        background: transparent;
       }
       ::-webkit-scrollbar-thumb {
-        background: rgba(255, 154, 46, 0.26);
-        border-radius: 6px;
+        background: var(--line-strong);
+        border-radius: 4px;
         border: 2px solid transparent;
         background-clip: padding-box;
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: rgba(255, 154, 46, 0.45);
+        background: var(--accent);
         background-clip: padding-box;
       }
       #app {
@@ -127,12 +140,12 @@
       }
       /* ============ TITLEBAR ============ */
       .titlebar {
-        height: 42px;
+        height: 44px;
         flex-shrink: 0;
         display: flex;
         align-items: center;
         gap: 8px;
-        padding: 0 10px;
+        padding: 0 12px;
         position: relative;
         z-index: 30;
         background: var(--bg2);
@@ -142,27 +155,36 @@
       .brand {
         display: flex;
         align-items: center;
-        gap: 7px;
+        gap: 8px;
         font-weight: 800;
-        font-size: 14px;
-        letter-spacing: 0.35px;
+        font-size: 13.5px;
+        letter-spacing: -0.01em;
         white-space: nowrap;
-        margin-right: 2px;
+        margin-right: 4px;
+        cursor: pointer;
+      }
+      .brand-logo {
+        width: 26px;
+        height: 26px;
+        object-fit: contain;
+        display: block;
+        flex-shrink: 0;
       }
       .brand .diamond {
-        color: var(--accent);
-        font-size: 18px;
+        display: none;
       }
       .brand .name {
         color: var(--bright);
+        font-weight: 800;
       }
       .brand .mega {
-        font-size: 8px;
-        letter-spacing: 1.5px;
-        color: #ffce8a;
-        background: rgba(255, 154, 46, 0.13);
-        border: 1px solid rgba(255, 154, 46, 0.3);
-        padding: 2px 5px;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #ffffff;
+        background: var(--accent);
+        border: 1px solid var(--accent-dark);
+        padding: 2px 6px;
         border-radius: 3px;
         text-transform: uppercase;
       }
@@ -3596,8 +3618,8 @@
     
       /* Checkerboard transparency for transparent canvas */
       .slide-surface.transparent-bg, .thumb-surface.transparent-bg {
-        background-color: #1a2233 !important;
-        background-image: repeating-conic-gradient(#242d42 0% 25%, #161c2b 0% 50%) !important;
+        background-color: #181a1f !important;
+        background-image: repeating-conic-gradient(#242830 0% 25%, #16181c 0% 50%) !important;
         background-position: 50% 50% !important;
         background-size: 20px 20px !important;
       }
@@ -3607,60 +3629,445 @@
         background-position: 50% 50% !important;
         background-size: 20px 20px !important;
       }
-      /* Clean non-gradient flat ribbon & buttons */
+
+      /* ============ FLAT GEOMETRIC DESIGN SYSTEM (COERENTE CON IL LOGO) ============ */
+      .titlebar,
+      .tabs,
+      .ribbon,
+      .left-panel,
+      .right-panel,
+      .statusbar,
+      .timeline,
+      .modal-card,
+      .ctx-menu,
+      .toast,
+      .density-notice {
+        background-image: none !important;
+        backdrop-filter: none !important;
+      }
+      .doc-title {
+        background: var(--panel-2) !important;
+        border: 1px solid var(--line) !important;
+        border-radius: var(--radius) !important;
+        color: var(--bright) !important;
+        text-align: left !important;
+        padding: 5px 10px !important;
+      }
+      .doc-title:hover {
+        border-color: var(--line-strong) !important;
+      }
+      .doc-title:focus {
+        border-color: var(--accent) !important;
+        box-shadow: 0 0 0 2px rgba(255, 85, 0, 0.2) !important;
+      }
+      .autosave {
+        background: var(--panel-2) !important;
+        border: 1px solid var(--line) !important;
+        border-radius: var(--radius) !important;
+        color: var(--dim) !important;
+      }
+      .icon-btn {
+        background: var(--panel-2) !important;
+        border: 1px solid var(--line) !important;
+        border-radius: var(--radius) !important;
+        color: var(--text) !important;
+        box-shadow: none !important;
+      }
+      .icon-btn:hover:not(:disabled) {
+        background: var(--panel-3) !important;
+        border-color: var(--line-strong) !important;
+        color: var(--bright) !important;
+      }
+      .icon-btn.on,
+      .icon-btn.active {
+        background: rgba(255, 85, 0, 0.14) !important;
+        border-color: var(--accent) !important;
+        color: var(--accent) !important;
+      }
       .tabs {
         background: var(--panel) !important;
         border-bottom: 1px solid var(--line) !important;
         box-shadow: none !important;
+        padding: 0 8px !important;
+        gap: 2px !important;
+      }
+      .tab {
+        border-radius: 0 !important;
+        border-bottom: 2px solid transparent !important;
+        color: var(--dim) !important;
+        font-weight: 600 !important;
+        background: transparent !important;
+      }
+      .tab:hover {
+        color: var(--bright) !important;
+        background: var(--panel-2) !important;
+      }
+      .tab.file {
+        color: var(--accent) !important;
+        font-weight: 800 !important;
       }
       .tab.active {
-        background: var(--panel-2) !important;
+        background: var(--bg2) !important;
         color: var(--bright) !important;
         border-bottom: 2px solid var(--accent) !important;
+      }
+      .tabs-right {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: var(--panel) !important;
       }
       .ribbon {
         background: var(--bg2) !important;
         border-bottom: 1px solid var(--line) !important;
         box-shadow: none !important;
+        padding: 6px 10px 4px !important;
+        gap: 6px !important;
       }
-      .ribbon-group {
+      .rb-group {
         background: var(--panel) !important;
         border: 1px solid var(--line) !important;
+        border-radius: var(--radius) !important;
+        padding: 4px 6px 2px !important;
         box-shadow: none !important;
       }
-      .ribbon-btn:hover {
-        background: var(--panel-3) !important;
+      .rb-label {
+        color: var(--dim) !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.04em !important;
       }
-      .ribbon-btn.active {
+      .tool-btn {
+        background: transparent !important;
+        border: 1px solid transparent !important;
+        border-radius: var(--radius) !important;
+        color: var(--text) !important;
+        box-shadow: none !important;
+      }
+      .tool-btn:hover {
         background: var(--panel-3) !important;
-        border: 1px solid var(--accent) !important;
+        border-color: var(--line) !important;
+        color: var(--bright) !important;
+      }
+      .tool-btn.active {
+        background: rgba(255, 85, 0, 0.14) !important;
+        border-color: var(--accent) !important;
         color: var(--bright) !important;
         box-shadow: none !important;
+      }
+      .tool-btn.active .ti {
+        color: var(--accent) !important;
+      }
+      .tool-btn.danger:hover {
+        background: rgba(239, 68, 68, 0.14) !important;
+        border-color: var(--danger) !important;
+        color: var(--danger) !important;
       }
       .primary-btn {
         background: var(--accent) !important;
         border: 1px solid var(--accent-dark) !important;
+        border-radius: var(--radius) !important;
         color: #fff !important;
+        font-weight: 700 !important;
         box-shadow: none !important;
       }
       .primary-btn:hover {
         background: var(--accent-dark) !important;
       }
       .ghost-btn {
-        background: var(--panel-3) !important;
+        background: var(--panel-2) !important;
         border: 1px solid var(--line) !important;
+        border-radius: var(--radius) !important;
         color: var(--text) !important;
+        font-weight: 600 !important;
         box-shadow: none !important;
       }
-      .ghost-btn:hover {
-        background: var(--panel-2) !important;
+      .ghost-btn:hover,
+      .ghost-btn.active {
+        background: var(--panel-3) !important;
+        border-color: var(--accent) !important;
         color: var(--bright) !important;
+      }
+      .left-panel,
+      .right-panel {
+        background: var(--panel) !important;
+        border-color: var(--line) !important;
+      }
+      .panel-tabs,
+      .props-tabs {
+        background: var(--bg2) !important;
+        border-bottom: 1px solid var(--line) !important;
+      }
+      .panel-tab,
+      .props-tab {
+        color: var(--dim) !important;
+        border-radius: 0 !important;
+        font-weight: 600 !important;
+      }
+      .panel-tab.active,
+      .props-tab.active {
+        color: var(--bright) !important;
+        background: var(--panel) !important;
+        border-bottom: 2px solid var(--accent) !important;
+      }
+      .panel-head {
+        background: var(--bg2) !important;
+        border-bottom: 1px solid var(--line) !important;
+        color: var(--dim) !important;
+      }
+      .stage {
+        background: var(--bg) !important;
+      }
+      .ruler-h,
+      .ruler-v,
+      .ruler-corner {
+        background: var(--panel-2) !important;
+        border-color: var(--line) !important;
+        color: var(--dim) !important;
+      }
+      .timeline {
+        background: var(--panel) !important;
+        border-top: 1px solid var(--line) !important;
+      }
+      .tl-head,
+      .tl-ruler {
+        background: var(--bg2) !important;
+        border-bottom: 1px solid var(--line) !important;
+      }
+      .statusbar {
+        background: var(--bg2) !important;
+        border-top: 1px solid var(--line) !important;
+        color: var(--dim) !important;
+      }
+      .status-btn {
+        background: var(--panel-2) !important;
+        border: 1px solid var(--line) !important;
+        border-radius: 3px !important;
+        color: var(--text) !important;
+      }
+      .status-btn:hover {
+        border-color: var(--line-strong) !important;
+        color: var(--bright) !important;
+      }
+      .status-btn.on {
+        background: rgba(255, 85, 0, 0.14) !important;
+        border-color: var(--accent) !important;
+        color: var(--accent) !important;
       }
       .modal-card {
         background: var(--panel) !important;
         border: 1px solid var(--line-strong) !important;
-        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4) !important;
+        border-radius: 6px !important;
+        box-shadow: var(--shadow-lg) !important;
       }
+      .modal-head,
+      .modal-foot {
+        background: var(--bg2) !important;
+        border-color: var(--line) !important;
+      }
+      .ctx-menu {
+        background: var(--panel) !important;
+        border: 1px solid var(--line-strong) !important;
+        border-radius: 5px !important;
+        box-shadow: var(--shadow-lg) !important;
+      }
+      .ctx-item {
+        color: var(--text) !important;
+        border-radius: 3px !important;
+      }
+      .ctx-item:hover {
+        background: rgba(255, 85, 0, 0.14) !important;
+        color: var(--bright) !important;
+      }
+      .ctx-sep {
+        background: var(--line) !important;
+      }
+      .ctx-title,
+      .ctx-item .short {
+        color: var(--dim) !important;
+      }
+      .toast {
+        background: var(--panel) !important;
+        border: 1px solid var(--line-strong) !important;
+        border-left: 3px solid var(--accent) !important;
+        border-radius: 4px !important;
+        color: var(--bright) !important;
+        box-shadow: var(--shadow-md) !important;
+      }
+      .density-notice {
+        background: var(--panel) !important;
+        border: 1px solid var(--accent) !important;
+        border-radius: 5px !important;
+        color: var(--text) !important;
+        box-shadow: var(--shadow-lg) !important;
+      }
+      .effect-card {
+        background: var(--panel-2) !important;
+        border: 1px solid var(--line) !important;
+        border-radius: var(--radius) !important;
+        color: var(--text) !important;
+      }
+      .effect-card:hover {
+        border-color: var(--accent) !important;
+        background: var(--panel-3) !important;
+      }
+
+      /* ============ MODALITÀ DIURNA (LIGHT MODE) PARITÀ COMPLETA ============ */
+      body.theme-light .prop-row input[type="number"],
+      body.theme-light .prop-row input[type="text"],
+      body.theme-light .prop-row select,
+      body.theme-light .prop-row textarea,
+      body.theme-light .field input,
+      body.theme-light .field select,
+      body.theme-light .field textarea,
+      body.theme-light .sidebar-search input,
+      body.theme-light .hex-wrap input,
+      body.theme-light .ribbon-inline select,
+      body.theme-light .ribbon-inline input[type="number"] {
+        background: var(--panel) !important;
+        border: 1px solid var(--line-strong) !important;
+        color: var(--text) !important;
+      }
+      body.theme-light .layer-row,
+      body.theme-light .list-row,
+      body.theme-light .asset-tile,
+      body.theme-light .template-card {
+        background: var(--panel-2) !important;
+        border-color: var(--line) !important;
+        color: var(--text) !important;
+      }
+      body.theme-light .layer-row.active,
+      body.theme-light .slide-thumb.active {
+        border-color: var(--accent) !important;
+        background: rgba(255, 85, 0, 0.08) !important;
+      }
+      body.theme-light .btn-row button,
+      body.theme-light .toggle-group button,
+      body.theme-light .add-slide-btn {
+        background: var(--panel-2) !important;
+        border: 1px solid var(--line) !important;
+        color: var(--text) !important;
+      }
+      body.theme-light .btn-row button:hover,
+      body.theme-light .toggle-group button:hover,
+      body.theme-light .add-slide-btn:hover {
+        background: var(--panel-3) !important;
+        border-color: var(--accent) !important;
+        color: var(--bright) !important;
+      }
+      body.theme-light .toggle-group button.active {
+        background: rgba(255, 85, 0, 0.15) !important;
+        border-color: var(--accent) !important;
+        color: var(--accent-dark) !important;
+      }
+      body.theme-light .slide-wrapper {
+        box-shadow: 0 6px 24px rgba(15, 23, 42, 0.12), 0 0 0 1px var(--line) !important;
+      }
+      body.theme-light .status-pill {
+        background: var(--panel-2) !important;
+        border-color: var(--line) !important;
+        color: var(--text) !important;
+      }
+      body.theme-light .prop-note {
+        background: var(--panel-2) !important;
+        border-color: var(--line) !important;
+        color: var(--dim) !important;
+      }
+
+      /* ============ VISIBILITÀ BARRE E MODALITÀ FOCUS / HUD ============ */
+      body.hide-ribbon #ribbon {
+        display: none !important;
+      }
+      body.hide-tabs #tabs {
+        display: none !important;
+      }
+      body.hide-statusbar .statusbar {
+        display: none !important;
+      }
+      body.focus-mode #ribbon,
+      body.focus-mode #tabs,
+      body.focus-mode #leftPanel,
+      body.focus-mode #rightPanel,
+      body.focus-mode .statusbar {
+        display: none !important;
+      }
+      .hud-restore-pill {
+        position: fixed;
+        bottom: 14px;
+        right: 14px;
+        z-index: 800;
+        display: none;
+        align-items: center;
+        gap: 6px;
+        background: var(--panel);
+        border: 1px solid var(--accent);
+        color: var(--bright);
+        padding: 6px 11px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-md);
+        font-size: 11px;
+        font-weight: 700;
+      }
+      body.focus-mode .hud-restore-pill,
+      body.hide-ribbon.hide-tabs .hud-restore-pill,
+      body.hide-statusbar .hud-restore-pill {
+        display: inline-flex;
+      }
+      .hud-toggle-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+        gap: 8px;
+        margin-top: 8px;
+      }
+      .hud-toggle-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 10px 12px;
+        background: var(--panel-2);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        cursor: pointer;
+        text-align: left;
+        transition: border-color 0.15s, background 0.15s;
+      }
+      .hud-toggle-card:hover {
+        border-color: var(--accent);
+      }
+      .hud-toggle-card.active {
+        border-color: var(--accent);
+        background: rgba(255, 85, 0, 0.1);
+      }
+      .hud-toggle-card .ht-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .hud-toggle-card .ht-title {
+        font-size: 11.5px;
+        font-weight: 700;
+        color: var(--bright);
+      }
+      .hud-toggle-card .ht-sub {
+        font-size: 9.5px;
+        color: var(--dim);
+      }
+      .hud-toggle-card .ht-badge {
+        font-size: 9.5px;
+        font-weight: 800;
+        padding: 2px 7px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        background: var(--panel-3);
+        color: var(--dim);
+        border: 1px solid var(--line);
+      }
+      .hud-toggle-card.active .ht-badge {
+        background: var(--accent);
+        color: #fff;
+        border-color: var(--accent-dark);
+      }
+
       /* Dynamic brush cursor */
       #brushCursorIndicator {
         position: fixed;
@@ -3684,50 +4091,53 @@
   </head>
   <body>
     <div id="app">
-      <header class="titlebar">
-        <div class="brand" title="OverPowerPoint Studio">
+      <header class="titlebar" role="banner">
+        <div class="brand" id="brandHomeBtn" title="OverPowerPoint Studio — Informazioni sul progetto" role="button" tabindex="0">
+          <img src="icons/logo.png" alt="Logo OverPowerPoint" class="brand-logo" width="26" height="26" />
           <span class="diamond"> ◆</span>
           <span class="name"> OverPowerPoint</span>
-          <span class="mega"> Mega Studio</span>
+          <span class="mega"> STUDIO</span>
         </div>
         <input class="doc-title" id="docTitle" value="Presentazione senza titolo" aria-label="Nome progetto" spellcheck="false" />
 
-        <div class="autosave" id="autosaveBadge" title="Stato salvataggio automatico">
+        <div class="autosave" id="autosaveBadge" title="Stato salvataggio automatico" role="status" aria-live="polite">
           <span class="dot"> </span>
           <span id="autosaveText"> Salvato</span>
         </div>
         <div class="title-spacer"></div>
-        <div class="title-controls">
-          <button class="icon-btn" id="themeToggleBtn" title="Passa a modalità diurna/notturna" style="font-size:14px">🌙</button>
-          <button class="icon-btn" id="undoBtn" title="Annulla (Ctrl+Z)" disabled>↶</button>
-          <button class="icon-btn" id="redoBtn" title="Ripeti (Ctrl+Y)" disabled>↷</button>
-          <button class="icon-btn" id="searchBtn" title="Cerca comando (Ctrl+K)">⌕</button>
-          <button class="icon-btn" id="commentBtn" title="Commenti">💬</button>
-          <button class="icon-btn" id="layoutBtn" title="Mostra/nascondi pannelli">◫</button>
-          <button class="ghost-btn" id="shareBtn" title="Condividi">
+        <div class="title-controls" role="toolbar" aria-label="Azioni rapide documento">
+          <button class="icon-btn" id="themeToggleBtn" title="Passa a modalità diurna/notturna" aria-label="Cambia modalità diurna o notturna" style="font-size:13px">🌙</button>
+          <button class="icon-btn" id="undoBtn" title="Annulla (Ctrl+Z)" aria-label="Annulla" disabled>↶</button>
+          <button class="icon-btn" id="redoBtn" title="Ripeti (Ctrl+Y)" aria-label="Ripeti" disabled>↷</button>
+          <button class="icon-btn" id="searchBtn" title="Cerca comando (Ctrl+K)" aria-label="Cerca tutti i comandi">⌕</button>
+          <button class="icon-btn" id="commentBtn" title="Commenti sulla slide" aria-label="Commenti">💬</button>
+          <button class="icon-btn" id="layoutBtn" title="Mostra/nascondi pannelli laterali" aria-label="Mostra o nascondi pannelli laterali">◫</button>
+          <button class="icon-btn" id="hudMenuBtn" title="Opzioni barre e interfaccia HUD" aria-label="Configura barre e pannelli HUD">⊞</button>
+          <button class="ghost-btn" id="shareBtn" title="Condividi progetto">
             <span class="btn-ico"> ↗</span>
             <span class="btn-lbl"> Condividi</span>
           </button>
-          <button class="primary-btn" id="exportBtn" title="Esporta (Ctrl+E)">Esporta</button>
+          <button class="primary-btn" id="exportBtn" title="Esporta progetto (Ctrl+E)">Esporta</button>
         </div>
       </header>
-      <nav class="tabs" id="tabs">
-        <button class="tab file" data-tab="File">File</button>
-        <button class="tab" data-tab="Home">Home</button>
-        <button class="tab" data-tab="Inserisci">Inserisci</button>
-        <button class="tab" data-tab="Disegna">Disegna</button>
-        <button class="tab" data-tab="Foto">Foto</button>
-        <button class="tab" data-tab="Vettore">Vettore</button>
-        <button class="tab" data-tab="Presentazione">Presentazione</button>
-        <button class="tab" data-tab="Video">Video</button>
-        <button class="tab" data-tab="Revisione">Revisione</button>
-        <button class="tab" data-tab="Visualizza">Visualizza</button>
-        
+      <nav class="tabs" id="tabs" role="tablist" aria-label="Sezioni dello studio">
+        <button class="tab file" data-tab="File" role="tab">File</button>
+        <button class="tab" data-tab="Home" role="tab">Home</button>
+        <button class="tab" data-tab="Inserisci" role="tab">Inserisci</button>
+        <button class="tab" data-tab="Disegna" role="tab">Disegna</button>
+        <button class="tab" data-tab="Foto" role="tab">Foto</button>
+        <button class="tab" data-tab="Vettore" role="tab">Vettore</button>
+        <button class="tab" data-tab="Presentazione" role="tab">Presentazione</button>
+        <button class="tab" data-tab="Video" role="tab">Video</button>
+        <button class="tab" data-tab="Revisione" role="tab">Revisione</button>
+        <button class="tab" data-tab="Visualizza" role="tab">Visualizza</button>
+        <button class="tab" data-tab="Effetti" role="tab">Effetti</button>
         <span class="tabs-right">
-          <button class="icon-btn small" id="allCmdBtn" title="Tutti i comandi">☰</button>
+          <button class="icon-btn small" id="ribbonToggleBtn" title="Mostra/nascondi barra degli strumenti (Ribbon)" aria-label="Mostra o nascondi barra degli strumenti">⌃</button>
+          <button class="icon-btn small" id="allCmdBtn" title="Tutti i comandi (Ctrl+K)" aria-label="Tutti i comandi">☰</button>
         </span>
       </nav>
-      <section class="ribbon" id="ribbon"></section>
+      <section class="ribbon" id="ribbon" role="toolbar" aria-label="Barra degli strumenti contestuale"></section>
       <section class="main">
         <aside class="left-panel" id="leftPanel">
           <div class="panel-tabs">
@@ -3820,7 +4230,7 @@
             <div class="color-bar">
               <div class="fg-bg" id="fgBg">
                 <div class="fg" id="fgPreview" title="Colore primo piano">
-                  <input type="color" id="fgColorInput" value="#ff9a2e" />
+                  <input type="color" id="fgColorInput" value="#ff5500" />
                 </div>
                 <div class="bgc" id="bgPreview" title="Colore sfondo">
                   <input type="color" id="bgColorInput" value="#ffffff" />
@@ -3828,7 +4238,7 @@
                 <button class="swap" id="swapColorsBtn" title="Inverti colori">⇄</button>
               </div>
               <div class="hex-wrap">
-                <input id="hexInput" value="#FF9A2E" maxlength="7" spellcheck="false" aria-label="Colore HEX" />
+                <input id="hexInput" value="#FF5500" maxlength="7" spellcheck="false" aria-label="Colore HEX" />
                 <button class="icon-btn small" id="applyColorBtn" title="Applica colore alla selezione">✓</button>
               </div>
             </div>
@@ -3837,7 +4247,7 @@
         </aside>
       </section>
       <div class="panel-backdrop" id="panelBackdrop" aria-hidden="true"></div>
-      <footer class="statusbar">
+      <footer class="statusbar" role="contentinfo">
         <span class="stat" id="toolStat"> Seleziona</span>
         <span class="stat" id="posStat"> 0, 0</span>
         <span class="stat" id="sizeStat"> 960 × 540</span>
@@ -3848,18 +4258,20 @@
         </span>
         <span class="stat" id="commentStat"> 💬 0</span>
         <div class="grow"></div>
-        <button class="status-btn" id="gridToggleBtn" title="Griglia">▦ Griglia</button>
+        <button class="status-btn" id="gridToggleBtn" title="Mostra/nascondi griglia">▦ Griglia</button>
         <button class="status-btn" id="snapToggleBtn" title="Aggancia oggetti">⌖ Snap</button>
-        <button class="status-btn" id="rulerToggleBtn" title="Righelli">↔ Righelli</button>
-        <button class="status-btn" id="leftToggleBtn" title="Pannello sinistro">◧</button>
-        <button class="status-btn" id="rightToggleBtn" title="Pannello destro">◨</button>
+        <button class="status-btn" id="rulerToggleBtn" title="Mostra/nascondi righelli">↔ Righelli</button>
+        <button class="status-btn" id="leftToggleBtn" title="Mostra/nascondi pannello sinistro">◧</button>
+        <button class="status-btn" id="rightToggleBtn" title="Mostra/nascondi pannello destro">◨</button>
+        <button class="status-btn" id="hudStatusBtn" title="Configura barre e interfaccia HUD">⊞ Barre</button>
         <div class="zoom-ctrl">
-          <button id="zoomOut" title="Riduci zoom">−</button>
-          <input type="range" id="zoomSlider" min="15" max="400" value="100" step="5" />
-          <button id="zoomIn" title="Aumenta zoom">+</button>
+          <button id="zoomOut" title="Riduci zoom" aria-label="Riduci zoom">−</button>
+          <input type="range" id="zoomSlider" min="15" max="400" value="100" step="5" aria-label="Livello di zoom" />
+          <button id="zoomIn" title="Aumenta zoom" aria-label="Aumenta zoom">+</button>
           <span class="zoom-val" id="zoomVal" title="Clic per 100%"> 100%</span>
         </div>
       </footer>
+      <button class="hud-restore-pill" id="hudRestoreBtn" title="Ripristina tutte le barre dell'interfaccia">⊞ Mostra barre HUD</button>
     </div>
     <div id="brushCursorIndicator"></div>
     <div class="toast-wrap" id="toastWrap"></div>
@@ -3871,7 +4283,7 @@
             <h3 id="modalTitle">Titolo</h3>
             <p id="modalSub"></p>
           </div>
-          <button class="modal-close" id="modalClose">✕</button>
+          <button class="modal-close" id="modalClose" aria-label="Chiudi finestra">✕</button>
         </div>
         <div class="modal-body" id="modalBody"></div>
         <div class="modal-foot" id="modalFoot"></div>
@@ -3916,17 +4328,60 @@
    ===================================================================== */
 
 // =====================================================================
-// 1. THEME ENGINE: Modalità Notturna e Diurna (Flat, Professional, No Gradient)
+// 1. THEME ENGINE: Modalità Notturna, Diurna e Contrasto Elevato (Flat)
 // =====================================================================
+function ensureUiThemeCSS() {
+  if (document.getElementById("opp-ui-theme")) return;
+  const style = document.createElement("style");
+  style.id = "opp-ui-theme";
+  style.textContent = `
+    body.theme-contrast {
+      --bg: #000000;
+      --bg2: #000000;
+      --panel: #050505;
+      --panel-2: #0d0d0d;
+      --panel-3: #171717;
+      --text: #ffffff;
+      --dim: #e0e0e0;
+      --bright: #ffffff;
+      --line: rgba(255, 255, 255, 0.45);
+      --line-strong: #ffffff;
+      --accent: #ffe600;
+      --accent2: #fff36b;
+      --accent-dark: #c7b400;
+      background: #000000 !important;
+    }
+    body.theme-contrast .titlebar,
+    body.theme-contrast .tabs,
+    body.theme-contrast .ribbon,
+    body.theme-contrast .statusbar {
+      background: #050505 !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 function applyUiTheme(name) {
-  const theme = name || state.settings?.uiTheme || "dark";
-  if (state.settings) state.settings.uiTheme = theme;
-  const isLight = theme === "light" || theme === "diurna";
+  ensureUiThemeCSS();
+  const raw = String(name || state.settings?.uiTheme || "dark").toLowerCase();
+  const isLight = raw === "light" || raw === "diurna" || raw === "chiaro";
+  const isContrast = raw === "contrast" || raw === "contrasto";
+  const normalized = isContrast ? "contrast" : isLight ? "light" : "dark";
+  if (state.settings) state.settings.uiTheme = normalized;
   document.body.classList.toggle("theme-light", isLight);
+  document.body.classList.toggle("theme-contrast", isContrast);
+  document.documentElement.setAttribute("data-theme", normalized);
   const toggleBtn = $("themeToggleBtn");
   if (toggleBtn) {
-    toggleBtn.textContent = isLight ? "☀️" : "🌙";
-    toggleBtn.title = isLight ? "Passa a modalità notturna (Dark Mode)" : "Passa a modalità diurna (Light Mode)";
+    toggleBtn.textContent = isLight ? "☀️" : isContrast ? "◐" : "🌙";
+    toggleBtn.setAttribute("aria-pressed", String(isLight));
+    toggleBtn.title = isLight
+      ? "Modalità Diurna attiva — Clicca per passare a Modalità Notturna"
+      : "Modalità Notturna attiva — Clicca per passare a Modalità Diurna";
+  }
+  const metaTheme = $("metaThemeColor");
+  if (metaTheme) {
+    metaTheme.setAttribute("content", isLight ? "#f7f8fa" : "#121316");
   }
 }
 
@@ -3935,6 +4390,8 @@ function toggleTheme() {
   const nextTheme = isLight ? "dark" : "light";
   applyUiTheme(nextTheme);
   if (typeof saveSettings === "function") saveSettings();
+  if (typeof renderRibbon === "function") renderRibbon();
+  if (typeof renderStatus === "function") renderStatus();
   toast(nextTheme === "light" ? "Modalità diurna attivata" : "Modalità notturna attivata", "info", 1800);
 }
 
@@ -11484,12 +11941,13 @@ Object.assign(COMMANDS, {
             img.src = d.dataUrl;
           };
           window.addEventListener("message", onMessage);
+          const curTheme = document.body.classList.contains("theme-light") ? "light" : "dark";
           openModal({
             title: eff.label,
             icon: eff.icon || "✨",
             sub: eff.description || "",
             size: "effect",
-            body: `<div class="effect-frame"><iframe id="effectFrame" title="${escAttr(eff.label)}" src="effects/${escAttr(eff.file)}?embed=1"></iframe></div>`,
+            body: `<div class="effect-frame"><iframe id="effectFrame" title="${escAttr(eff.label)}" src="effects/${escAttr(eff.file)}?embed=1&theme=${curTheme}"></iframe></div>`,
             foot: `<button class="ghost-btn" data-close>Chiudi</button>`,
             onClose: () => window.removeEventListener("message", onMessage),
           });
@@ -11548,6 +12006,7 @@ Object.assign(COMMANDS, {
             ]);
             html += ribbonGroup("Sistema", [
               ribbonBtn("⚙", "Preferenze", "file.preferences", { p: 1 }),
+              ribbonBtn("⊞", "Barre HUD", "view.hudMenu"),
               ribbonBtn("⌨", "Scorciatoie", "help.shortcuts"),
               ribbonBtn("ℹ", "Info", "help.about"),
               ribbonBtn("☰", "Tutti i comandi", "help.commands"),
@@ -11655,16 +12114,16 @@ Object.assign(COMMANDS, {
             ]);
           }
           if (T === "Disegna") {
-            html += ribbonGroup("Strumenti Pennello", [
+            html += ribbonGroup("Strumenti Disegno", [
               ribbonTool("↖", "Seleziona", "select", null, 1),
-              ribbonTool("⌁", "Nodo", "node", null, 1),
+              ribbonTool("⌁", "Nodo", "node"),
               ribbonTool("✒", "Penna", "pen", null, 1),
               ribbonTool("🖌", "Pennello", "brush", null, 1),
               ribbonTool("▮", "Evidenziatore", "highlighter", null, 1),
               ribbonTool("⚡", "Neon", "neon", null, 1),
               ribbonTool("⌫", "Gomma", "eraser", null, 1),
               ribbonTool("◉", "Contagocce", "eyedropper", null, 1),
-              ribbonTool("⛶", "Ritaglia", "crop", null, 1),
+              ribbonTool("⛶", "Ritaglia", "crop"),
             ]);
             if (!isSimpleRibbon())
               html += ribbonGroup("Punta & Parametri", [
@@ -11673,46 +12132,47 @@ Object.assign(COMMANDS, {
                 `<div class="ribbon-inline" style="flex-direction:column;height:auto;align-items:stretch;gap:2px"><div style="display:flex;align-items:center;gap:5px;justify-content:space-between"><span class="mini-label">Durezza</span><span data-brush-val>${Math.round(state.brush.hardness * 100)}%</span></div><input type="range" data-brush="hardness" min="0" max="100" step="1" value="${Math.round(state.brush.hardness * 100)}"></div>`,
                 `<div style="display:flex;gap:3px;margin-top:2px"><button class="ghost-btn ${state.brush.shape==='circle'||!state.brush.shape?'active':''}" data-command="draw.brushShape" data-arg="circle" title="Punta Circolare">● Rotondo</button><button class="ghost-btn ${state.brush.shape==='square'?'active':''}" data-command="draw.brushShape" data-arg="square" title="Punta Quadrata">■ Squadrato</button><button class="ghost-btn ${state.brush.shape==='chisel'?'active':''}" data-command="draw.brushShape" data-arg="chisel" title="Punta Calligrafica">╱ Chisel</button></div>`
               ]);
-            html += ribbonGroup("Colore", [
+            html += ribbonGroup("Colore & Tratto", [
               `<label class="ribbon-inline"><span class="mini-label">Colore</span><input type="color" class="ribbon-color" data-brush="color" value="${normalizeHex(state.brush.color || state.fg)}"></label>`,
               ribbonBtn("🎨", "Color Picker", "color.pickerAdvanced", { tall: true, p: 1, title: "Ruota cromatica HSV, RGB e contagocce" }),
             ]);
-            html += ribbonGroup("Tela & Azioni", [
+            html += ribbonGroup("Tela & Inchiostro", [
               ribbonBtn("◩", "Sfondo Trasparente", "slide.transparent", { tall: true, p: 1, title: "Sfondo trasparente a scacchiera per loghi ed editing" }),
               ribbonBtn("⌫", "Pulisci", "ink.clear", { danger: true, p: 1 }),
-              ribbonBtn("◉", "Mostra/nascondi", "ink.visible", { p: 1 }),
+              ribbonBtn("◉", "Mostra/nascondi", "ink.visible"),
               ribbonBtn("✦", "Simmetria", "ink.symmetry", { p: 1 }),
             ]);
             html += ribbonGroup("Forme & Pattern", [
               ribbonShape("rect", 1),
-              ribbonShape("ellipse", 1),
-              ribbonBtn("☆", "Stella", "shape.starParametric", { p: 1 }),
-              ribbonBtn("⬡", "Poligono", "shape.polygonParametric", { p: 1 }),
+              ribbonShape("ellipse"),
+              ribbonBtn("☆", "Stella", "shape.starParametric"),
+              ribbonBtn("⬡", "Poligono", "shape.polygonParametric"),
               ribbonBtn("⌗", "Pattern Engine", "vector.pattern", { p: 1, title: "Ripeti elementi geometrici in griglia o mattonella" }),
             ]);
           }
           if (T === "Foto") {
             html += ribbonGroup("Immagine & Ritaglio", [
               ribbonBtn("▧", "Importa", "insert.image", { tall: true, p: 1 }),
-              ribbonBtn("⇄", "Sostituisci", "image.replace", { tall: true, p: 1 }),
+              ribbonBtn("⇄", "Sostituisci", "image.replace"),
               ribbonBtn("⛶", "Ritaglia", "image.crop", { tall: true, p: 1 }),
               ribbonBtn("✂", "Ritaglio Avanzato", "image.cutout", { tall: true, p: 1, title: "Isola soggetti con lazo, pennello o gomma trasparente" }),
               ribbonBtn("✂", "Rimuovi sfondo", "image.removeBg", { p: 1 }),
               ribbonBtn("↑", "Upscale", "image.upscale"),
             ]);
-            html += ribbonGroup("Regola & Colore", [
+            html += ribbonGroup("Correzione Colore", [
               ribbonBtn("☀", "Regola Avanzato", "image.colorCorrection", { tall: true, p: 1, title: "Luminosità, contrasto, saturazione, temperatura, luci e ombre" }),
               ribbonBtn("📈", "Curve RGB", "image.curves", { tall: true, p: 1, title: "Grafico cartesiano per controllo tonale RGB" }),
               ribbonBtn("☀", "Luminosità", "image.quick.brightness"),
               ribbonBtn("◐", "Contrasto", "image.quick.contrast"),
               ribbonBtn("◉", "Saturazione", "image.quick.saturation"),
               ribbonBtn("◑", "Bianco/nero", "image.filter.bw", { p: 1 }),
-              ribbonBtn("↺", "Reset", "image.filter.reset", { p: 1 }),
+              ribbonBtn("↺", "Reset", "image.filter.reset"),
             ]);
             html += ribbonGroup("Ritocco & Warp", [
               ribbonBtn("💧", "Fluidifica", "image.liquify", { tall: true, p: 1, title: "Spingi, vortice, comprimi e gonfia" }),
               ribbonBtn("🎯", "Clona", "image.clone", { tall: true, p: 1, title: "Pennello per duplicare porzioni di immagine con mirino" }),
               ribbonBtn("💥", "Dispersione", "image.dispersion", { tall: true, p: 1, title: "Frammentazione particellare a pennello" }),
+              ribbonBtn("🖌", "Dipingi FX", "image.paintFx", { p: 1, title: "Dipingi l'effetto solo su parte dell'immagine" }),
             ]);
             html += ribbonGroup("Trasforma & 3D", [
               ribbonBtn("⛶", "Prospettiva 3D", "image.perspective", { tall: true, p: 1, title: "Inclinazione 3D e punti di fuga" }),
@@ -11723,18 +12183,12 @@ Object.assign(COMMANDS, {
               ribbonBtn("☆", "Maschera Stella", "image.mask.star"),
               ribbonBtn("▭", "Nessuna Maschera", "image.mask.none"),
             ]);
-            html += ribbonGroup("Effetti (FX)", [
-              ribbonBtn("◌", "Sfocatura Gaussiana", "fx.blur.gaussian", { tall: true, p: 1 }),
-              ribbonBtn("⌗", "Tilt-Shift", "fx.blur.tiltshift", { p: 1 }),
-              ribbonBtn("⚡", "Glitch Digitale", "fx.glitch", { tall: true, p: 1 }),
-              ribbonBtn("▦", "Pixelate", "fx.pixelate", { p: 1 }),
+            html += ribbonGroup("Filtri & FX", [
+              ribbonBtn("◌", "Sfocatura", "fx.blur.gaussian", { tall: true, p: 1 }),
+              ribbonBtn("⌗", "Tilt-Shift", "fx.blur.tiltshift"),
+              ribbonBtn("⚡", "Glitch", "fx.glitch", { tall: true, p: 1 }),
+              ribbonBtn("▦", "Pixelate", "fx.pixelate"),
               ribbonBtn("🎞", "Vintage", "image.filter.vintage"),
-            ]);
-            html += ribbonGroup("Dipingi Effetto", [
-              ribbonBtn("🖌", "Dipingi FX Locale", "image.paintFx", { tall: true, p: 1, title: "Dipingi l'effetto solo su parte dell'immagine" }),
-            ]);
-            html += ribbonGroup("Effetti Modulari", [
-              effectCardsHtml()
             ]);
           }
           if (T === "Vettore") {
@@ -11877,14 +12331,20 @@ Object.assign(COMMANDS, {
               ribbonBtn("⌖", "Snap", "view.snap", { active: state.snapObjects, p: 1 }),
               ribbonBtn("↔", "Righelli", "view.rulers", { active: state.showRulers, p: 1 }),
               ribbonBtn("⌗", "Guide", "slide.guides"),
-              ribbonBtn("◫", "Pannelli", "view.panels", { p: 1 }),
             ]);
-            html += ribbonGroup("Interfaccia", [
+            html += ribbonGroup("Barre e Pannelli HUD", [
+              ribbonBtn("⊞", "Menu Barre", "view.hudMenu", { tall: true, p: 1, title: "Mostra o nascondi singolarmente tutte le barre e i pannelli" }),
+              ribbonBtn("⌃", "Barra Ribbon", "view.ribbon", { active: !document.body.classList.contains("hide-ribbon") }),
+              ribbonBtn("◫", "Pannelli", "view.panels", { p: 1 }),
               ribbonBtn("▤", "Timeline", "view.timeline", { p: 1 }),
+              ribbonBtn("▭", "Barra stato", "view.statusbar", { active: !document.body.classList.contains("hide-statusbar") }),
+            ]);
+            html += ribbonGroup("Aspetto e Modalità", [
+              ribbonBtn(document.body.classList.contains("theme-light") ? "☀️" : "🌙", "Giorno/Notte", "theme.toggle", { tall: true, p: 1, title: "Alterna modalità Diurna e Notturna" }),
+              ribbonBtn("◉", "Modalità focus", "view.focus", { active: state.focusMode, p: 1 }),
               ribbonBtn("⛶", "Schermo intero", "view.fullscreen"),
-              ribbonBtn("◉", "Modalità focus", "view.focus", { p: 1 }),
-              ribbonBtn("◐", "Tema", "view.theme", { p: 1 }),
-              ribbonBtn("◱", "Interfaccia semplice", "view.density", { title: "Mostra solo i comandi essenziali" }),
+              ribbonBtn("◐", "Tema", "view.theme"),
+              ribbonBtn("◱", "Densità UI", "view.density", { title: "Alterna interfaccia semplice e completa" }),
             ]);
             html += ribbonGroup("Aree di lavoro", [
               ribbonBtn("▦", "Presentazione", "workspace.present"),
@@ -11917,7 +12377,11 @@ Object.assign(COMMANDS, {
           renderTabsActive();
         }
         function renderTabsActive() {
-          $$("#tabs .tab").forEach((t) => t.classList.toggle("active", t.dataset.tab === state.tab));
+          $$("#tabs .tab").forEach((t) => {
+            const isAct = t.dataset.tab === state.tab;
+            t.classList.toggle("active", isAct);
+            t.setAttribute("aria-selected", String(isAct));
+          });
           $$(".panel-tab[data-lefttab]").forEach((t) => t.classList.toggle("active", t.dataset.lefttab === state.leftTab));
           $$(".props-tab[data-proptab]").forEach((t) => t.classList.toggle("active", t.dataset.proptab === state.propTab));
           $("leftSlides")?.classList.toggle("hidden", state.leftTab !== "slides");
@@ -11926,6 +12390,11 @@ Object.assign(COMMANDS, {
         }
         function switchTab(tab) {
           if (state.editingTextId) finishTextEdit();
+          if (document.body.classList.contains("hide-ribbon")) {
+            document.body.classList.remove("hide-ribbon");
+            if ($("ribbonToggleBtn")) $("ribbonToggleBtn").textContent = "⌃";
+            setTimeout(fitZoom, 30);
+          }
           state.tab = tab;
           if (tab === "Foto" || tab === "Vettore") {
             state.workspace = tab === "Foto" ? "Foto" : "Vettoriale";
@@ -16585,42 +17054,240 @@ Object.assign(COMMANDS, {
         function exportReviewReport() {
           downloadBlob(new Blob([reviewReportText()], { type: "text/plain;charset=utf-8" }), cleanName(state.docName) + "-report.txt");
           toast("Report esportato", "success");
-        } /* ---------- preferenze e temi ---------- */
-        function ensureUiThemeCSS() {
-          if (document.getElementById("opp-ui-theme")) return;
-          const style = document.createElement("style");
-          style.id = "opp-ui-theme";
-          style.textContent = `  body.theme-contrast{--bg:#000;--bg2:#000;--panel:#050505;--panel-2:#0a0a0a;--text:#fff;--dim:#d7d7d7;--line:rgba(255,255,255,.3);--accent:#ffe600;--accent2:#fff36b;--accent-dark:#b9a900;--accent-glow:rgba(255,230,0,.35);background:#000!important}  body.theme-contrast #app::before{display:none}  body.theme-contrast .titlebar,body.theme-contrast .tabs,body.theme-contrast .ribbon,body.theme-contrast .statusbar{background:#050505!important}  body.focus-mode #ribbon,body.focus-mode #leftPanel,body.focus-mode #rightPanel{display:none!important}  body.focus-mode .stage{height:100%}  `;
-          document.head.appendChild(style);
+        } /* ---------- gestione barre HUD, preferenze e temi ---------- */
+        function syncHudToggleUI() {
+          const ribHidden = document.body.classList.contains("hide-ribbon");
+          const tabsHidden = document.body.classList.contains("hide-tabs");
+          const statHidden = document.body.classList.contains("hide-statusbar");
+          const focusOn = !!state.focusMode || document.body.classList.contains("focus-mode");
+          const rBtn = $("ribbonToggleBtn");
+          if (rBtn) {
+            rBtn.textContent = ribHidden ? "⌄" : "⌃";
+            rBtn.classList.toggle("active", ribHidden);
+            rBtn.title = ribHidden ? "Mostra barra strumenti Ribbon" : "Comprimi barra strumenti Ribbon";
+          }
+          const hBtn = $("hudMenuBtn");
+          if (hBtn) {
+            hBtn.classList.toggle("active", ribHidden || tabsHidden || statHidden || focusOn);
+          }
+          const hsBtn = $("hudStatusBtn");
+          if (hsBtn) {
+            hsBtn.classList.toggle("active", ribHidden || tabsHidden || focusOn);
+          }
         }
-        function applyUiTheme(name) {
-          ensureUiThemeCSS();
-          const theme = name || state.settings.uiTheme || "default";
-          state.settings.uiTheme = theme;
-          document.body.classList.toggle("theme-contrast", theme === "contrast");
+        function toggleRibbonBar(force) {
+          const hide = typeof force === "boolean" ? force : !document.body.classList.contains("hide-ribbon");
+          document.body.classList.toggle("hide-ribbon", hide);
+          syncHudToggleUI();
+          setTimeout(fitZoom, 35);
+        }
+        function toggleTabsBar(force) {
+          const hide = typeof force === "boolean" ? force : !document.body.classList.contains("hide-tabs");
+          document.body.classList.toggle("hide-tabs", hide);
+          syncHudToggleUI();
+          setTimeout(fitZoom, 35);
+        }
+        function toggleStatusbar(force) {
+          const hide = typeof force === "boolean" ? force : !document.body.classList.contains("hide-statusbar");
+          document.body.classList.toggle("hide-statusbar", hide);
+          syncHudToggleUI();
+          setTimeout(fitZoom, 35);
+        }
+        function resetAllHudBars() {
+          state.focusMode = false;
+          document.body.classList.remove("focus-mode", "hide-ribbon", "hide-tabs", "hide-statusbar");
+          $("leftPanel")?.classList.remove("collapsed");
+          $("rightPanel")?.classList.remove("collapsed");
+          updatePanelBackdrop();
+          renderStatus();
+          syncHudToggleUI();
+          setTimeout(fitZoom, 35);
+          toast("Tutte le barre e i pannelli HUD sono visibili", "info", 1400);
+        }
+        function openHudBarsModal() {
+          const draw = () => {
+            const items = [
+              {
+                id: "ribbon",
+                label: "Barra strumenti (Ribbon)",
+                sub: "Comandi contestuali della scheda attiva",
+                on: !document.body.classList.contains("hide-ribbon") && !state.focusMode,
+                toggle: () => toggleRibbonBar(),
+              },
+              {
+                id: "tabs",
+                label: "Barra schede di navigazione",
+                sub: "Home, Inserisci, Testo, Forme, Foto, Effetti…",
+                on: !document.body.classList.contains("hide-tabs") && !state.focusMode,
+                toggle: () => toggleTabsBar(),
+              },
+              {
+                id: "left",
+                label: "Pannello sinistro (Slide & Libreria)",
+                sub: "Miniature diapositive, risorse e modelli",
+                on: !$("leftPanel")?.classList.contains("collapsed") && !state.focusMode,
+                toggle: () => togglePanel("left"),
+              },
+              {
+                id: "right",
+                label: "Pannello destro (Ispettore & Livelli)",
+                sub: "Proprietà geometriche, livelli e palette colori",
+                on: !$("rightPanel")?.classList.contains("collapsed") && !state.focusMode,
+                toggle: () => togglePanel("right"),
+              },
+              {
+                id: "timeline",
+                label: "Timeline animazioni e audio",
+                sub: "Controllo durata slide, tracce e anteprima",
+                on: $("timeline")?.classList.contains("open"),
+                toggle: () => runCommand("timeline.toggle"),
+              },
+              {
+                id: "statusbar",
+                label: "Barra di stato inferiore",
+                sub: "Zoom, coordinate cursore, griglia e stato salvataggio",
+                on: !document.body.classList.contains("hide-statusbar") && !state.focusMode,
+                toggle: () => toggleStatusbar(),
+              },
+              {
+                id: "rulers",
+                label: "Righelli metrici su tela",
+                sub: "Riferimenti orizzontali e verticali in pixel",
+                on: !!state.showRulers,
+                toggle: () => runCommand("view.rulers"),
+              },
+              {
+                id: "grid",
+                label: "Griglia di composizione",
+                sub: "Griglia visiva sulla diapositiva",
+                on: !!state.showGrid,
+                toggle: () => runCommand("view.grid"),
+              },
+              {
+                id: "snap",
+                label: "Allineamento calamita (Snap)",
+                sub: "Aggancio automatico agli oggetti e al centro",
+                on: !!state.snap,
+                toggle: () => runCommand("view.snap"),
+              },
+              {
+                id: "focus",
+                label: "Modalità Focus (Zen)",
+                sub: "Nasconde tutte le barre per lavorare solo sulla tela",
+                on: !!state.focusMode,
+                toggle: () => runCommand("view.focus"),
+              },
+            ];
+            const curTheme = state.settings?.uiTheme === "light" ? "light" : state.settings?.uiTheme === "contrast" ? "contrast" : "dark";
+            $("modalBody").innerHTML = `
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;margin-bottom:12px">
+                <div>
+                  <div style="font-size:12px;font-weight:700;color:var(--bright)">Tema visivo Studio</div>
+                  <div style="font-size:10px;color:var(--dim)">Passa istantaneamente tra modalità Notturna (Flat Dark), Diurna (Flat Light) o Contrasto.</div>
+                </div>
+                <div style="display:flex;gap:6px">
+                  <button class="ghost-btn ${curTheme === "dark" ? "primary-btn" : ""}" id="hudThemeDark">☾ Notturna</button>
+                  <button class="ghost-btn ${curTheme === "light" ? "primary-btn" : ""}" id="hudThemeLight">☀ Diurna</button>
+                  <button class="ghost-btn ${curTheme === "contrast" ? "primary-btn" : ""}" id="hudThemeContrast">◐ Contrasto</button>
+                </div>
+              </div>
+              <div class="hud-toggle-grid">
+                ${items
+                  .map(
+                    (it, idx) => `
+                  <div class="hud-toggle-card ${it.on ? "on" : ""}" data-hud-idx="${idx}" role="switch" aria-checked="${it.on ? "true" : "false"}" tabindex="0">
+                    <div>
+                      <div class="hud-label">${esc(it.label)}</div>
+                      <div class="hud-sub">${esc(it.sub)}</div>
+                    </div>
+                    <span class="hud-switch"></span>
+                  </div>
+                `,
+                  )
+                  .join("")}
+              </div>
+              <div class="prop-note" style="margin-top:12px">
+                Suggerimento: puoi comprimere rapidamente la barra Ribbon con il pulsante <b>⌃</b> a destra delle schede, oppure ripristinare l'interfaccia completa in qualsiasi momento.
+              </div>
+            `;
+            $("hudThemeDark").onclick = () => {
+              applyUiTheme("dark");
+              saveSettings();
+              draw();
+            };
+            $("hudThemeLight").onclick = () => {
+              applyUiTheme("light");
+              saveSettings();
+              draw();
+            };
+            $("hudThemeContrast").onclick = () => {
+              applyUiTheme("contrast");
+              saveSettings();
+              draw();
+            };
+            $$("#modalBody [data-hud-idx]").forEach((card) => {
+              const trigger = () => {
+                const it = items[Number(card.dataset.hudIdx)];
+                if (it) {
+                  it.toggle();
+                  draw();
+                }
+              };
+              card.onclick = trigger;
+              card.onkeydown = (ev) => {
+                if (ev.key === "Enter" || ev.key === " ") {
+                  ev.preventDefault();
+                  trigger();
+                }
+              };
+            });
+          };
+          openModal({
+            title: "Gestione Barre, Pannelli e HUD",
+            icon: "⊞",
+            sub: "Mostra o nascondi singolarmente ogni barra e strumento dell'area di lavoro.",
+            size: "wide",
+            body: "",
+            foot: `<button class="ghost-btn" id="hudFocusQuick">⛶ Attiva/Disattiva Focus</button><button class="ghost-btn" id="hudResetAll">↺ Mostra tutte le barre</button><button class="primary-btn" data-close>Chiudi</button>`,
+          });
+          draw();
+          $("hudFocusQuick").onclick = () => {
+            runCommand("view.focus");
+            draw();
+          };
+          $("hudResetAll").onclick = () => {
+            resetAllHudBars();
+            draw();
+          };
         }
         function openPreferencesModal() {
           const s = state.settings;
+          const curTheme = s.uiTheme === "light" ? "light" : s.uiTheme === "contrast" ? "contrast" : "dark";
           openModal({
             title: "Preferenze",
             icon: "⚙",
-            sub: "Comportamento dell’editor e salvataggio locale.",
+            sub: "Comportamento dell’editor, tema visivo e salvataggio locale.",
             size: "wide",
-            body: `<div class="field-row"><div class="field"><label>Salvataggio automatico</label><label style="display:flex;align-items:center;gap:6px;font-size:10px;color:var(--dim)"><input type="checkbox" id="prefAutosave" ${s.autosave ? "checked" : ""}> salva nell’archivio del browser</label></div><div class="field"><label>Controllo ortografico</label><label style="display:flex;align-items:center;gap:6px;font-size:10px;color:var(--dim)"><input type="checkbox" id="prefSpell" ${s.spellcheck ? "checked" : ""}> attivo per i testi</label></div></div><div class="field-row"><div class="field"><label>Transizione predefinita</label><select id="prefTransition">${optList(TRANSITIONS, s.defaultTransition || "fade")}</select></div><div class="field"><label>Tema interfaccia</label><select id="prefTheme">${optList(
+            body: `<div class="field-row"><div class="field"><label>Salvataggio automatico</label><label style="display:flex;align-items:center;gap:6px;font-size:10px;color:var(--dim)"><input type="checkbox" id="prefAutosave" ${s.autosave ? "checked" : ""}> salva nell’archivio del browser</label></div><div class="field"><label>Controllo ortografico</label><label style="display:flex;align-items:center;gap:6px;font-size:10px;color:var(--dim)"><input type="checkbox" id="prefSpell" ${s.spellcheck ? "checked" : ""}> attivo per i testi</label></div></div><div class="field-row"><div class="field"><label>Transizione predefinita</label><select id="prefTransition">${optList(TRANSITIONS, s.defaultTransition || "fade")}</select></div><div class="field"><label>Tema interfaccia (Notturna / Diurna)</label><select id="prefTheme">${optList(
               [
-                { v: "default", l: "Aero scuro" },
-                { v: "contrast", l: "Contrasto elevato" },
+                { v: "dark", l: "Notturna — Flat Obsidian (scuro)" },
+                { v: "light", l: "Diurna — Flat Studio (chiaro)" },
+                { v: "contrast", l: "Contrasto elevato (accessibilità)" },
               ],
-              s.uiTheme || "default",
+              curTheme,
             )}</select></div></div><div class="field-row"><div class="field"><label>Densità interfaccia</label><select id="prefDensity">${optList(
               [
-                { v: "semplice", l: "Semplice — solo i comandi essenziali" },
-                { v: "completa", l: "Completa — tutti i gruppi" },
+                { v: "semplice", l: "Semplice — comandi essenziali ordinati" },
+                { v: "completa", l: "Completa — tutti i gruppi e strumenti" },
               ],
               s.uiDensity || "semplice",
-            )}</select></div><div class="field"><label>Suggerimenti</label><label style="display:flex;align-items:center;gap:6px;font-size:10px;color:var(--dim)"><input type="checkbox" id="prefTips" ${s.showTips ? "checked" : ""}> mostra i suggerimenti all’avvio</label></div></div><div class="prop-note">La griglia, lo snap e i righelli si trovano nella barra di stato e vengono salvati con le preferenze.</div>`,
-            foot: `<button class="ghost-btn" data-close>Annulla</button><button class="ghost-btn" id="prefReset">Ripristina</button><button class="primary-btn" id="prefSave">Salva preferenze</button>`,
+            )}</select></div><div class="field"><label>Suggerimenti</label><label style="display:flex;align-items:center;gap:6px;font-size:10px;color:var(--dim)"><input type="checkbox" id="prefTips" ${s.showTips ? "checked" : ""}> mostra i suggerimenti all’avvio</label></div></div><div class="prop-note">Usa il pulsante <b>⊞ Barre HUD</b> nella barra in alto o in basso per nascondere o mostrare singolarmente Ribbon, schede, pannelli laterali e barra di stato.</div>`,
+            foot: `<button class="ghost-btn" data-close>Annulla</button><button class="ghost-btn" id="prefHudBtn">⊞ Gestione Barre HUD</button><button class="ghost-btn" id="prefReset">Ripristina</button><button class="primary-btn" id="prefSave">Salva preferenze</button>`,
           });
+          $("prefHudBtn").onclick = () => {
+            closeModal();
+            setTimeout(openHudBarsModal, 30);
+          };
           $("prefSave").onclick = () => {
             state.settings.autosave = $("prefAutosave").checked;
             state.settings.spellcheck = $("prefSpell").checked;
@@ -16639,6 +17306,7 @@ Object.assign(COMMANDS, {
             state.settings = deep(DEFAULT_SETTINGS);
             saveSettings();
             applyUiTheme(state.settings.uiTheme);
+            renderRibbon();
             closeModal();
             toast("Preferenze ripristinate", "success");
           };
@@ -16678,6 +17346,8 @@ Object.assign(COMMANDS, {
             style: "Stile",
             align: "Allinea",
             arrange: "Disponi",
+            theme: "Tema",
+            effects: "Effetti",
           };
           const verbs = {
             new: "Nuovo",
@@ -16724,7 +17394,15 @@ Object.assign(COMMANDS, {
             preferences: "Preferenze",
             fullscreen: "Schermo intero",
             focus: "Modalità focus",
-            theme: "Tema",
+            theme: "Cambia tema Giorno/Notte",
+            toggle: "Cambia tema Giorno/Notte",
+            hudMenu: "Gestione barre e HUD",
+            ribbon: "Mostra/Nascondi barra Ribbon",
+            tabsBar: "Mostra/Nascondi barra schede",
+            statusbar: "Mostra/Nascondi barra di stato",
+            leftPanel: "Mostra/Nascondi pannello sinistro",
+            rightPanel: "Mostra/Nascondi pannello destro",
+            resetHud: "Ripristina tutte le barre HUD",
             zoomIn: "Aumenta zoom",
             zoomOut: "Riduci zoom",
           };
@@ -16742,9 +17420,9 @@ Object.assign(COMMANDS, {
           openModal({
             title: "Comandi rapidi",
             icon: "⌘",
-            sub: "Cerca ed esegui qualsiasi comando.",
+            sub: "Cerca ed esegui qualsiasi comando o strumento dello studio.",
             size: "wide",
-            body: `<div class="field"><input id="cmdSearch" placeholder="Scrivi un comando, es. esporta, allinea, tema…" autocomplete="off" spellcheck="false"></div><div id="cmdResults" style="display:flex;flex-direction:column;gap:3px;max-height:52vh;overflow:auto;margin-top:8px"></div>`,
+            body: `<div class="field"><input id="cmdSearch" placeholder="Scrivi un comando, es. esporta, allinea, tema, barre, ritaglia…" autocomplete="off" spellcheck="false"></div><div id="cmdResults" style="display:flex;flex-direction:column;gap:3px;max-height:52vh;overflow:auto;margin-top:8px"></div>`,
             foot: `<button class="ghost-btn" data-close>Chiudi</button><span class="field-hint">Invio esegue il primo risultato</span>`,
             focus: "cmdSearch",
           });
@@ -16790,7 +17468,7 @@ Object.assign(COMMANDS, {
                 ["Ctrl+Z / Ctrl+Y", "Annulla / Ripeti"],
                 ["Ctrl+S", "Salva progetto"],
                 ["Ctrl+E", "Esporta PNG rapido"],
-                ["Ctrl+K", "Comandi rapidi"],
+                ["Ctrl+K", "Tavolozza comandi rapidi"],
                 ["F5 / Shift+F5", "Presenta dall’inizio / dalla slide"],
               ],
             ],
@@ -16805,14 +17483,13 @@ Object.assign(COMMANDS, {
               ],
             ],
             [
-              "Vista",
+              "Vista e Strumenti",
               [
                 ["Ctrl+0", "Adatta alla finestra"],
                 ["Ctrl+1", "Zoom 100%"],
                 ["Ctrl+= / Ctrl+-", "Zoom avanti / indietro"],
-                ["R", "Forma"],
-                ["T", "Testo"],
                 ["V / A / P", "Seleziona / Nodi / Penna"],
+                ["R / T", "Inserisci Forma / Testo"],
               ],
             ],
             [
@@ -16821,14 +17498,14 @@ Object.assign(COMMANDS, {
                 ["→ / ←", "Slide successiva / precedente"],
                 ["N", "Note relatore"],
                 ["B", "Schermo nero"],
-                ["Esc", "Esci"],
+                ["Esc", "Esci dalla presentazione"],
               ],
             ],
           ];
           const body = groups
             .map(
               ([title, rows]) =>
-                `<div class="panel-head"><span>${title}</span></div><div style="display:flex;flex-direction:column;gap:3px;margin-bottom:10px">${rows.map(([k, v]) => `<div class="list-row"><span style="flex:1;color:var(--dim)">${esc(v)}</span><kbd style="background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-family:monospace;font-size:9px">${esc(k)}</kbd></div>`).join("")}</div>`,
+                `<div class="panel-head"><span>${title}</span></div><div style="display:flex;flex-direction:column;gap:3px;margin-bottom:10px">${rows.map(([k, v]) => `<div class="list-row"><span style="flex:1;color:var(--dim)">${esc(v)}</span><kbd style="background:var(--panel-2);border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-family:monospace;font-size:9px;color:var(--bright)">${esc(k)}</kbd></div>`).join("")}</div>`,
             )
             .join("");
           openModal({
@@ -16844,10 +17521,11 @@ Object.assign(COMMANDS, {
           openModal({
             title: "OverPowerPoint Studio",
             icon: "◆",
-            sub: "Mega Sala Creativa · versione 2.0",
-            body: `<div style="font-size:12px;line-height:1.7">Un unico file HTML per creare presentazioni, grafiche, immagini, tracciati, diagrammi e video WebM. Nessun servizio esterno, nessun account, nessun dato inviato.</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:12px"><div class="chip green">Zero dipendenze</div><div class="chip green">Offline</div><div class="chip green">Autosalvataggio</div><div class="chip green">Export PPTX / PDF / WebM</div><div class="chip green">AI locale procedurale</div><div class="chip green">Dati nel browser</div></div><div class="prop-note" style="margin-top:12px">Suggerimento: usa <b>Ctrl+K</b> per trovare qualsiasi funzione senza cercare nel ribbon.</div>`,
-            foot: `<button class="ghost-btn" data-close>Chiudi</button><button class="ghost-btn" id="aboutPrefs">Preferenze</button><button class="primary-btn" id="aboutShortcuts">Scorciatoie</button>`,
+            sub: "Mega Sala Creativa · Flat Edition 2.0",
+            body: `<div style="display:flex;align-items:center;gap:14px;padding:10px 12px;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;margin-bottom:12px"><img src="icons/logo.png" alt="Logo OverPowerPoint" style="width:52px;height:52px;object-fit:contain;flex-shrink:0"><div style="font-size:12px;line-height:1.6">Ambiente creativo all-in-one per presentazioni, grafica vettoriale, fotoritocco, diagrammi e video WebM. Progettato con architettura locale senza dipendenze esterne.</div></div><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:10px"><div class="chip orange">Design Flat Geometrico</div><div class="chip green">Modalità Diurna / Notturna</div><div class="chip green">100% Locale & Offline PWA</div><div class="chip green">Export PPTX / PDF / WebM</div><div class="chip green">Effetti & Laboratorio Foto</div><div class="chip green">HUD & Barre Configurabili</div></div><div class="prop-note" style="margin-top:12px">Suggerimento: usa <b>Ctrl+K</b> per trovare qualsiasi funzione o <b>⊞ Barre HUD</b> per personalizzare l'area di lavoro.</div>`,
+            foot: `<button class="ghost-btn" data-close>Chiudi</button><button class="ghost-btn" id="aboutHud">⊞ Barre HUD</button><button class="ghost-btn" id="aboutPrefs">Preferenze</button><button class="primary-btn" id="aboutShortcuts">Scorciatoie</button>`,
           });
+          $("aboutHud").onclick = () => openHudBarsModal();
           $("aboutPrefs").onclick = () => openPreferencesModal();
           $("aboutShortcuts").onclick = () => openShortcutsModal();
         }
@@ -17104,7 +17782,7 @@ Object.assign(COMMANDS, {
             title: "Riempimento gradiente",
             icon: "◩",
             sub: "Applica una sfumatura alla selezione.",
-            body: `<div class="field-row"><div class="field"><label>Colore 1</label><input type="color" id="gradA" value="${normalizeHex(first.fill || state.fg, "#ff9a2e")}"></div><div class="field"><label>Colore 2</label><input type="color" id="gradB" value="${normalizeHex(first.fill2 || "#ffd08a", "#ffd08a")}"></div></div><div class="field"><label>Angolo</label><input type="range" id="gradAngle" min="0" max="360" value="${Number(first.gradientAngle || 0)}"><div class="field-hint"><span id="gradAngleVal">${Number(first.gradientAngle || 0)}</span>°</div></div><div id="gradPreview" style="height:70px;border-radius:6px;border:1px solid var(--line);margin-top:8px"></div>`,
+            body: `<div class="field-row"><div class="field"><label>Colore 1</label><input type="color" id="gradA" value="${normalizeHex(first.fill || state.fg, "#ff5500")}"></div><div class="field"><label>Colore 2</label><input type="color" id="gradB" value="${normalizeHex(first.fill2 || "#ff884d", "#ff884d")}"></div></div><div class="field"><label>Angolo</label><input type="range" id="gradAngle" min="0" max="360" value="${Number(first.gradientAngle || 0)}"><div class="field-hint"><span id="gradAngleVal">${Number(first.gradientAngle || 0)}</span>°</div></div><div id="gradPreview" style="height:70px;border-radius:6px;border:1px solid var(--line);margin-top:8px"></div>`,
             foot: `<button class="ghost-btn" data-close>Annulla</button><button class="primary-btn" id="gradApply">Applica</button>`,
           });
           const update = () => {
@@ -17334,14 +18012,18 @@ Object.assign(COMMANDS, {
           "view.focus": () => {
             state.focusMode = !state.focusMode;
             document.body.classList.toggle("focus-mode", state.focusMode);
+            syncHudToggleUI();
             setTimeout(fitZoom, 40);
             toast(state.focusMode ? "Modalità focus attiva" : "Modalità focus disattivata", "info", 1500);
           },
-          "view.theme": () => {
-            applyUiTheme(state.settings.uiTheme === "contrast" ? "default" : "contrast");
-            saveSettings();
-            toast("Tema " + (state.settings.uiTheme === "contrast" ? "contrasto elevato" : "Aero scuro"), "info", 1500);
-          },
+          "view.hudMenu": openHudBarsModal,
+          "view.ribbon": () => toggleRibbonBar(),
+          "view.tabsBar": () => toggleTabsBar(),
+          "view.statusbar": () => toggleStatusbar(),
+          "view.leftPanel": () => togglePanel("left"),
+          "view.rightPanel": () => togglePanel("right"),
+          "view.resetHud": resetAllHudBars,
+          "view.theme": () => toggleTheme(),
           "workspace.graphic": () => switchWorkspace("Grafica"),
           "workspace.photo": () => switchWorkspace("Foto"),
           "workspace.present": () => switchWorkspace("Presentazione"),
@@ -17352,83 +18034,164 @@ Object.assign(COMMANDS, {
         function buildWelcomeDeck() {
           state.W = DEFAULT_W;
           state.H = DEFAULT_H;
-          const first = blankSlide({ bg: { type: "gradient", color: "#081120", color2: "#162b4d", angle: 135 } });
+          const first = blankSlide({ bg: { type: "solid", color: "#121316" } });
           first.name = "Benvenuto";
           first.transition = "fade";
           first.duration = 5;
           first.notes = "Panoramica di OverPowerPoint Studio. Premi F5 per presentare.";
           first.elements = [
-            shapeElement("ellipse", {
-              x: -130,
-              y: -150,
-              w: 560,
-              h: 560,
-              fill: "#ff9a2e",
-              fill2: "#ff5e3a",
-              fillType: "gradient",
-              opacity: 0.18,
+            shapeElement("rect", {
+              x: 0,
+              y: 0,
+              w: 16,
+              h: 540,
+              fill: "#ff5500",
+              fillType: "solid",
               stroke: "transparent",
-              name: "Glow arancio",
+              name: "Barra accento",
             }),
-            shapeElement("ellipse", { x: 690, y: 300, w: 430, h: 430, fill: "#5594ff", opacity: 0.14, stroke: "transparent", name: "Glow blu" }),
-            textElement("MEGA SALA CREATIVA", {
-              x: 80,
-              y: 86,
-              w: 620,
-              h: 32,
-              fontSize: 14,
+            shapeElement("round", {
+              x: 610,
+              y: 64,
+              w: 286,
+              h: 412,
+              fill: "#181a1f",
+              fillType: "solid",
+              stroke: "#2a2e38",
+              strokeWidth: 2,
+              radius: 10,
+              name: "Card anteprima",
+            }),
+            shapeElement("rect", {
+              x: 642,
+              y: 100,
+              w: 222,
+              h: 146,
+              fill: "#121316",
+              fillType: "solid",
+              stroke: "#ff5500",
+              strokeWidth: 3,
+              name: "Cornice visuale",
+            }),
+            shapeElement("triangle", {
+              x: 666,
+              y: 148,
+              w: 110,
+              h: 82,
+              fill: "#ff5500",
+              fillType: "solid",
+              stroke: "transparent",
+              name: "Montagna icona",
+            }),
+            shapeElement("ellipse", {
+              x: 794,
+              y: 124,
+              w: 36,
+              h: 36,
+              fill: "#ff5500",
+              fillType: "solid",
+              stroke: "transparent",
+              name: "Sole icona",
+            }),
+            shapeElement("rect", {
+              x: 642,
+              y: 280,
+              w: 222,
+              h: 18,
+              fill: "#ff5500",
+              fillType: "solid",
+              stroke: "transparent",
+              name: "Barra 1",
+            }),
+            shapeElement("rect", {
+              x: 642,
+              y: 312,
+              w: 222,
+              h: 18,
+              fill: "#ff5500",
+              fillType: "solid",
+              stroke: "transparent",
+              name: "Barra 2",
+            }),
+            shapeElement("rect", {
+              x: 642,
+              y: 344,
+              w: 156,
+              h: 18,
+              fill: "#ff6e26",
+              fillType: "solid",
+              stroke: "transparent",
+              name: "Barra 3",
+            }),
+            textElement("STUDIO CREATIVO FLAT · ALL-IN-ONE", {
+              x: 76,
+              y: 88,
+              w: 500,
+              h: 28,
+              fontSize: 13,
               bold: true,
-              color: "#ffbe6a",
+              color: "#ff5500",
               align: "left",
-              letterSpacing: 3,
+              letterSpacing: 2.5,
               name: "Etichetta",
             }),
-            textElement("OverPowerPoint", { x: 74, y: 130, w: 830, h: 100, fontSize: 76, bold: true, color: "#ffffff", align: "left", name: "Titolo" }),
-            textElement("Presentazioni, grafica e video in un unico file HTML. Senza account, senza cloud, senza dipendenze.", {
-              x: 80,
-              y: 252,
-              w: 760,
-              h: 78,
-              fontSize: 22,
-              color: "#c9d6e8",
+            textElement("OverPowerPoint", {
+              x: 72,
+              y: 126,
+              w: 520,
+              h: 96,
+              fontSize: 64,
+              bold: true,
+              color: "#ffffff",
               align: "left",
+              name: "Titolo",
+            }),
+            textElement("Presentazioni, grafica vettoriale, fotoritocco e video in un unico ambiente piatto, veloce e 100% locale.", {
+              x: 76,
+              y: 238,
+              w: 500,
+              h: 82,
+              fontSize: 20,
+              color: "#b4bcc8",
+              align: "left",
+              lineHeight: 1.45,
               name: "Sottotitolo",
             }),
-            textElement("Ctrl+K per cercare qualsiasi comando   ·   F5 per presentare", {
-              x: 80,
-              y: 355,
-              w: 700,
+            textElement("Ctrl+K comandi rapidi   ·   ⊞ Barre HUD   ·   F5 presenta", {
+              x: 76,
+              y: 364,
+              w: 510,
               h: 34,
-              fontSize: 14,
+              fontSize: 13,
               bold: true,
-              color: "#ffb85c",
+              color: "#ff6e26",
               align: "left",
               name: "Suggerimento",
             }),
           ];
-          const second = blankSlide({ bg: { type: "gradient", color: "#0a1628", color2: "#101f36", angle: 180 } });
+          const second = blankSlide({ bg: { type: "solid", color: "#121316" } });
           second.name = "Tutto in un file";
           second.transition = "fade";
           second.duration = 4;
           second.notes = "Quattro aree di lavoro: creazione, modifica, presentazione, esportazione.";
           second.elements = [
-            textElement("Tutto, in un solo file", { x: 64, y: 58, w: 820, h: 66, fontSize: 42, bold: true, color: "#ffffff", align: "left", name: "Titolo" }),
-            textElement("Dalla slide al video, senza cambiare applicazione.", {
+            textElement("Tutto in un solo ambiente", { x: 64, y: 58, w: 820, h: 66, fontSize: 42, bold: true, color: "#ffffff", align: "left", name: "Titolo" }),
+            textElement("Dalla diapositiva al fotoritocco e al video WebM, senza cambiare applicazione.", {
               x: 64,
               y: 120,
               w: 650,
               h: 30,
               fontSize: 16,
-              color: "#9fb1c9",
+              color: "#8e96a4",
               align: "left",
               name: "Sottotitolo",
             }),
           ];
           const cards = [
-            ["01", "Crea", "Slide, testi, forme, layout, diagrammi e tabelle."],
-            ["02", "Modifica", "Foto, filtri, maschere, tracciati, livelli e booleani."],
-            ["03", "Presenta", "Note relatore, transizioni, animazioni e timeline."],
-            ["04", "Esporta", "PNG, SVG, PDF, PPTX, HTML e video WebM."],
+            ["01", "Crea", "Slide, testi, forme geometriche, layout, diagrammi e tabelle."],
+            ["02", "Elabora", "Foto, filtri, ritaglio, maschere, tracciati vettoriali e booleani."],
+            ["03", "Presenta", "Note relatore, transizioni fluide, animazioni e timeline."],
+            ["04", "Esporta", "PNG, SVG, PDF, PPTX nativo, HTML interattivo e video WebM."],
           ];
           cards.forEach((c, i) => {
             const x = 64 + i * 214;
@@ -17438,19 +18201,16 @@ Object.assign(COMMANDS, {
                 y: 172,
                 w: 190,
                 h: 244,
-                fill: "#10223c",
+                fill: "#181a1f",
                 fillType: "solid",
-                stroke: "#2b4b77",
-                strokeWidth: 1.2,
-                radius: 18,
-                shadow: true,
-                shadowColor: "rgba(0,0,0,.4)",
-                shadowBlur: 18,
+                stroke: "#2a2e38",
+                strokeWidth: 1.5,
+                radius: 8,
                 name: "Card " + c[1],
               }),
             );
             second.elements.push(
-              textElement(c[0], { x: x + 18, y: 190, w: 50, h: 26, fontSize: 12, bold: true, color: "#ffb85c", align: "left", name: "Numero" }),
+              textElement(c[0], { x: x + 18, y: 190, w: 50, h: 26, fontSize: 12, bold: true, color: "#ff5500", align: "left", name: "Numero" }),
             );
             second.elements.push(
               textElement(c[1], { x: x + 18, y: 225, w: 154, h: 36, fontSize: 24, bold: true, color: "#ffffff", align: "left", name: c[1] }),
@@ -17462,7 +18222,7 @@ Object.assign(COMMANDS, {
                 w: 154,
                 h: 110,
                 fontSize: 13,
-                color: "#a9bad0",
+                color: "#b4bcc8",
                 align: "left",
                 lineHeight: 1.45,
                 name: "Descrizione " + c[1],
@@ -17476,12 +18236,12 @@ Object.assign(COMMANDS, {
               w: 780,
               h: 30,
               fontSize: 13,
-              color: "#7f93ab",
+              color: "#8e96a4",
               align: "left",
               name: "Nota",
             }),
           );
-          const third = blankSlide({ bg: { type: "gradient", color: "#0c1728", color2: "#1b2b46", angle: 120 } });
+          const third = blankSlide({ bg: { type: "solid", color: "#121316" } });
           third.name = "Prova subito";
           third.transition = "fade";
           third.duration = 4;
@@ -17492,51 +18252,51 @@ Object.assign(COMMANDS, {
               y: 64,
               w: 430,
               h: 412,
-              fill: "#0d1c32",
+              fill: "#181a1f",
               fillType: "solid",
-              stroke: "#27446b",
-              strokeWidth: 1,
-              radius: 18,
+              stroke: "#2a2e38",
+              strokeWidth: 1.5,
+              radius: 8,
               name: "Pannello passi",
             }),
             textElement("Prova subito", { x: 72, y: 86, w: 370, h: 48, fontSize: 34, bold: true, color: "#ffffff", align: "left", name: "Titolo" }),
-            textElement("1.  Premi Ctrl+K e cerca “gradiente”.", {
+            textElement("1.  Premi Ctrl+K e cerca qualsiasi strumento.", {
               x: 72,
               y: 154,
               w: 365,
               h: 34,
               fontSize: 15,
-              color: "#d5dfec",
+              color: "#e2e6ee",
               align: "left",
               name: "Passo 1",
             }),
-            textElement("2.  Seleziona una forma e apri il pannello Proprietà.", {
+            textElement("2.  Usa ☀/☾ in alto per la modalità Diurna o Notturna.", {
               x: 72,
               y: 198,
               w: 365,
               h: 34,
               fontSize: 15,
-              color: "#d5dfec",
+              color: "#e2e6ee",
               align: "left",
               name: "Passo 2",
             }),
-            textElement("3.  Premi F5 per presentare e N per le note.", {
+            textElement("3.  Clicca ⊞ per nascondere o mostrare le barre HUD.", {
               x: 72,
               y: 242,
               w: 365,
               h: 34,
               fontSize: 15,
-              color: "#d5dfec",
+              color: "#e2e6ee",
               align: "left",
               name: "Passo 3",
             }),
-            textElement("4.  Esporta in PPTX o WebM dalla scheda File.", {
+            textElement("4.  Esporta in PPTX, PDF o WebM dalla scheda File.", {
               x: 72,
               y: 286,
               w: 365,
               h: 34,
               fontSize: 15,
-              color: "#d5dfec",
+              color: "#e2e6ee",
               align: "left",
               name: "Passo 4",
             }),
@@ -17546,7 +18306,7 @@ Object.assign(COMMANDS, {
               w: 360,
               h: 70,
               fontSize: 13,
-              color: "#8fa6c0",
+              color: "#8e96a4",
               align: "left",
               name: "Nota",
             }),
@@ -17557,12 +18317,12 @@ Object.assign(COMMANDS, {
               h: 300,
               chartType: "bar",
               data: [
-                { label: "Foto", value: 84 },
-                { label: "Testo", value: 72 },
-                { label: "Video", value: 64 },
-                { label: "Vettori", value: 78 },
+                { label: "Foto", value: 88 },
+                { label: "Testo", value: 76 },
+                { label: "Video", value: 68 },
+                { label: "Vettori", value: 82 },
               ],
-              colors: ["#ff9a2e", "#59a8ff", "#3bd6a0", "#a98bff"],
+              colors: ["#ff5500", "#ff7733", "#3b82f6", "#10b981"],
               name: "Grafico strumenti",
             }),
           ];
@@ -17604,6 +18364,7 @@ Object.assign(COMMANDS, {
           if (isNarrowLayout() && willOpen && other) other.classList.add("collapsed");
           updatePanelBackdrop();
           renderStatus();
+          syncHudToggleUI();
           setTimeout(() => {
             fitZoom();
             updatePanelBackdrop();
@@ -17614,10 +18375,24 @@ Object.assign(COMMANDS, {
             const node = $(id);
             if (node) node.addEventListener(ev, fn);
           };
+          on("brandHomeBtn", "click", openAboutModal);
+          on("brandHomeBtn", "keydown", (ev) => {
+            if (ev.key === "Enter" || ev.key === " ") {
+              ev.preventDefault();
+              openAboutModal();
+            }
+          });
           on("tabs", "click", (ev) => {
             const b = ev.target.closest(".tab");
             if (b) switchTab(b.dataset.tab);
           });
+          on("ribbonToggleBtn", "click", (ev) => {
+            ev.stopPropagation();
+            toggleRibbonBar();
+          });
+          on("hudMenuBtn", "click", openHudBarsModal);
+          on("hudStatusBtn", "click", openHudBarsModal);
+          on("hudRestoreBtn", "click", resetAllHudBars);
           on("docTitle", "input", (ev) => {
             state.docName = ev.target.value;
           });
@@ -17639,6 +18414,7 @@ Object.assign(COMMANDS, {
           on("themeToggleBtn", "click", () => toggleTheme());
           initLayersToolbar();
           applyUiTheme(state.settings?.uiTheme || "dark");
+          syncHudToggleUI();
           on("undoBtn", "click", undo);
           on("redoBtn", "click", redo);
           on("searchBtn", "click", openCommandPalette);

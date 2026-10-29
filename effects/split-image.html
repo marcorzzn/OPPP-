@@ -3,29 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Splitta immagine in pannelli</title>
+    <link rel="icon" type="image/png" href="../icons/favicon-32.png" />
+    <title>Splitta immagine in pannelli — OverPowerPoint Studio</title>
     <style>
       :root {
-        --bg: #0f1115;
-        --panel: #171a21;
-        --border: #2a2e38;
-        --accent: #4f8cff;
-        --text: #e8eaed;
-        --muted: #9aa0ab;
+        --bg: #121316;
+        --panel: #181a1f;
+        --border: #2a2e37;
+        --accent: #ff5500;
+        --accent-hover: #e04800;
+        --text: #f3f4f6;
+        --muted: #9ca3af;
+      }
+      :root[data-theme="light"],
+      body[data-theme="light"] {
+        --bg: #f4f5f7;
+        --panel: #ffffff;
+        --border: #d5d9e2;
+        --accent: #ff5500;
+        --accent-hover: #e04800;
+        --text: #111317;
+        --muted: #5b6370;
       }
       * {
         box-sizing: border-box;
       }
       body {
         margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         background: var(--bg);
         color: var(--text);
         padding: 24px 16px 60px;
       }
       h1 {
         font-size: 1.4rem;
-        font-weight: 600;
+        font-weight: 800;
         text-align: center;
         margin: 0 0 6px;
       }
@@ -40,19 +52,19 @@
         margin: 0 auto;
       }
       .dropzone {
-        border: 2px dashed var(--border);
-        border-radius: 14px;
-        padding: 40px 20px;
+        border: 1px dashed var(--border);
+        border-radius: 6px;
+        padding: 36px 20px;
         text-align: center;
         cursor: pointer;
         transition:
-          border-color 0.2s,
-          background 0.2s;
+          border-color 0.15s,
+          background 0.15s;
         background: var(--panel);
       }
+      .dropzone:hover,
       .dropzone.dragover {
         border-color: var(--accent);
-        background: #1c2230;
       }
       .dropzone p {
         margin: 8px 0 0;
@@ -78,16 +90,19 @@
         background: var(--panel);
         color: var(--text);
         border: 1px solid var(--border);
-        border-radius: 8px;
+        border-radius: 4px;
         padding: 8px 14px;
-        font-size: 0.9rem;
+        font-size: 0.88rem;
+        font-weight: 600;
         cursor: pointer;
       }
       button.primary {
         background: var(--accent);
         border-color: var(--accent);
         color: white;
-        font-weight: 600;
+      }
+      button.primary:hover:not(:disabled) {
+        background: var(--accent-hover);
       }
       button:disabled {
         opacity: 0.4;
@@ -100,7 +115,7 @@
       #preview-strip {
         display: flex;
         border: 1px solid var(--border);
-        border-radius: 10px;
+        border-radius: 6px;
         overflow: hidden;
         background: var(--panel);
       }
@@ -108,7 +123,7 @@
         display: block;
         width: 25%;
         height: auto;
-        border-right: 1px dashed rgba(255, 255, 255, 0.15);
+        border-right: 1px dashed var(--border);
       }
       #preview-strip canvas:last-child {
         border-right: none;
@@ -122,20 +137,21 @@
       .panel-card {
         background: var(--panel);
         border: 1px solid var(--border);
-        border-radius: 10px;
+        border-radius: 6px;
         padding: 8px;
         text-align: center;
       }
       .panel-card canvas {
         width: 100%;
         height: auto;
-        border-radius: 6px;
+        border-radius: 4px;
         display: block;
         margin-bottom: 8px;
       }
       .panel-card span {
         display: block;
         font-size: 0.75rem;
+        font-weight: 700;
         color: var(--muted);
         margin-bottom: 6px;
       }
@@ -147,9 +163,10 @@
         color: white;
         text-decoration: none;
         font-size: 0.8rem;
+        font-weight: 600;
         padding: 6px 0;
         border: 0;
-        border-radius: 6px;
+        border-radius: 4px;
         margin-top: 6px;
         cursor: pointer;
       }

@@ -7,7 +7,13 @@ window.OPPFrame = {
     return window.parent !== window && new URLSearchParams(location.search).has("embed");
   },
   apply() {
+    const params = new URLSearchParams(location.search);
     if (this.isEmbed()) document.body.classList.add("embed");
+    const theme = params.get("theme");
+    if (theme === "light" || theme === "dark") {
+      document.documentElement.setAttribute("data-theme", theme);
+      document.body.setAttribute("data-theme", theme);
+    }
   },
   sendImage(canvas, name) {
     if (!this.isEmbed()) return false;
@@ -25,7 +31,7 @@ window.OPPFrame = {
     const el = document.createElement("div");
     el.textContent = msg;
     el.style.cssText =
-      "position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1c2434;color:#fff;padding:9px 16px;border-radius:8px;font:13px sans-serif;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.4)";
+      "position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#181a1f;color:#f3f4f6;border:1px solid #ff5500;padding:9px 16px;border-radius:4px;font:600 13px -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;z-index:9999;box-shadow:0 8px 24px rgba(0,0,0,.4)";
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 2200);
   },
